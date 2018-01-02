@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.archirayan.cabsbookdriver.activity.DriverProfile">
+
+    <LinearLayout
+        android:id="@+id/linear_current_trip"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_back_driver_profile"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:src="@drawable/ic_back_white" />
+
+            <TextView
+                android:id="@+id/txt_driver_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Driver Profile"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_220sdp"
+                android:background="@color/black"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_userimage"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:src="@drawable/ic_profile" />
+
+                <TextView
+                    android:id="@+id/txt_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="First Name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20sdp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_40sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_driver_trip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Trips"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="5"
+                                android:id="@+id/txt_driver_rating"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15sdp" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_10sdp"
+                                android:layout_height="@dimen/_10sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:src="@drawable/ic_star" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Rating"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_40sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="1"
+                            android:id="@+id/txt_driver_month"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Month"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llayout_driverprofile_selectlanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:src="@drawable/ic_languages" />
+
+                    <TextView
+                        android:id="@+id/txt_language"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_weight="1"
+                        android:text="What languages do you know?"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <ImageView
+                        android:id="@+id/img_language"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="15dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_driverprofile_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="#55000000" />
+
+
+                <LinearLayout
+                    android:id="@+id/llayout_driverprofile_selectcountry2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:src="@drawable/ic_grow_up" />
+
+                    <TextView
+                        android:id="@+id/txt_country"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_weight="1"
+                        android:text="Where did you grow up?"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <ImageView
+                        android:id="@+id/img_country"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="15dp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_driverprofile_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="#55000000" />
+
+
+                <LinearLayout
+                    android:id="@+id/llayout_driverprofile_recommandedcity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:src="@drawable/ic_city" />
+
+                    <TextView
+                        android:id="@+id/txt_city"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_weight="1"
+                        android:text="What can you recommend in your city?"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <ImageView
+                        android:id="@+id/img_city"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="15dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_driverprofile_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="#55000000" />
+
+
+                <LinearLayout
+                    android:id="@+id/llayout_driverprofile_addyourself"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:src="@drawable/ic_yourself" />
+
+                    <TextView
+                        android:id="@+id/txt_yourself"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_weight="1"
+                        android:text="How would you describe yourself?"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <ImageView
+                        android:id="@+id/img_yourself"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="15dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_driverprofile_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="#55000000" />
+
+                <LinearLayout
+                    android:id="@+id/llayout_driverprofile_selectfunfactmessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:src="@drawable/ic_fun" />
+
+                    <TextView
+                        android:id="@+id/txt_funfact"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_weight="1"
+                        android:text="What's a fun fact about you?"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <ImageView
+                        android:id="@+id/img_funfact"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="15dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_driverprofile_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="#55000000" />
+
+
+                <LinearLayout
+                    android:id="@+id/llayout_driverprofile_selectfavoritestory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:src="@drawable/ic_story" />
+
+                    <TextView
+                        android:id="@+id/txt_story"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_weight="1"
+                        android:text="What your favorite Cabs Book story to tell?"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <ImageView
+                        android:id="@+id/img_story"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="15dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

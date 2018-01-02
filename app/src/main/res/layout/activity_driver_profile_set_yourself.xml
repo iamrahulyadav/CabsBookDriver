@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.archirayan.cabsbookdriver.activity.DriverProfileSetYourselfActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_current_trip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/black"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_back_driver_profile"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:src="@drawable/ic_back_white" />
+
+            <TextView
+                android:id="@+id/txt_driver_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Driver Profile"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_weight="1.8">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/ic_yourself" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_17sdp"
+                            android:layout_marginRight="@dimen/_17sdp"
+                            android:gravity="center_horizontal"
+                            android:text="How would you describ yourself?"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_25sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="Your riders will see this on your Driver"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:text="Profile"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:text="Content Policy"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_13sdp" />
+
+
+                        <EditText
+                            android:id="@+id/edit_driveryourself"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:hint="EX: Parent and great chef!"
+                            android:paddingLeft="@dimen/_5sdp" />
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_weight="0.3"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_saveyourself"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="bottom|center_vertical"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@color/black"
+                    android:text="Save"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

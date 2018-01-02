@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.archirayan.cabsbookdriver.activity.OTPActivity">
+
+    <TextView
+        android:id="@+id/txt_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Your OTP Code:"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/black"/>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:layout_marginRight="@dimen/_40sdp" >
+
+        <EditText
+            android:id="@+id/edit_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Enter OTP"
+            android:textSize="@dimen/_15sdp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:layout_marginRight="@dimen/_50sdp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:text="next"
+        android:textSize="@dimen/_15sdp"/>
+
+</LinearLayout>

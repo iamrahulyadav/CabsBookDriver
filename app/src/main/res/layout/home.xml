@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/home"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_home_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#faf0f0">
+
+        <LinearLayout
+            android:id="@+id/linear_find_trip"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="#6e6e6e"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_find_trip"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/ic_findtrip"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Fing trip toward a destination"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_closetrip"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_cancle"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.archirayan.cabsbookdriver.activity.Documents">
+
+    <TextView
+        android:id="@+id/txt_documents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Documents"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:textSize="@dimen/_18sdp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/linear_driverlicense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_10sdp">
+    <View
+        android:id="@+id/view_driver_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#55000000"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_driverlicense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:text="Driver License"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="#000000"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_driverlicense"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_action_next"/>
+            <ImageView
+                android:id="@+id/img_driverlicense_click"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_action_click"/>
+        </RelativeLayout>
+    </LinearLayout>
+        </LinearLayout>
+<LinearLayout
+android:id="@+id/linear_licensebackside"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:layout_marginTop="@dimen/_8sdp">
+
+<View
+    android:id="@+id/view_driver_2"
+    android:layout_width="match_parent"
+    android:layout_height="0.1dp"
+    android:background="#55000000"/>
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txt_licensebackside"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:text="Driver License - Backside"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="#000000"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_licensebackside"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/ic_action_next"/>
+
+        <ImageView
+            android:id="@+id/img_licensebackside_click"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_action_click"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+<LinearLayout
+android:id="@+id/linear_vehicleinsur"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:layout_marginTop="@dimen/_8sdp">
+
+<View
+    android:id="@+id/view_driver_3"
+    android:layout_width="match_parent"
+    android:layout_height="0.1dp"
+    android:background="#55000000"/>
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txt_vehicleinsur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:text="Vehicle Insurance"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="#000000"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_vehicleinsur"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/ic_action_next"/>
+        <ImageView
+            android:id="@+id/img_vehicleinsur_click"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_action_click"/>
+    </RelativeLayout>
+</LinearLayout>
+</LinearLayout>
+
+<LinearLayout
+android:id="@+id/linear_vehiclepermit"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:layout_marginTop="@dimen/_8sdp">
+
+<View
+    android:id="@+id/view_driver_4"
+    android:layout_width="match_parent"
+    android:layout_height="0.1dp"
+    android:background="#55000000"/>
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txt_vehiclepermit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:text="Vehicle Permit"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="#000000"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_vehiclepermit"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/ic_action_next"/>
+        <ImageView
+            android:id="@+id/img_vehiclepermit_click"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_action_click"/>
+    </RelativeLayout>
+</LinearLayout>
+</LinearLayout>
+
+<LinearLayout
+android:id="@+id/linear_vehicleregi"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:layout_marginTop="@dimen/_8sdp">
+
+<View
+    android:id="@+id/view_driver_5"
+    android:layout_width="match_parent"
+    android:layout_height="0.1dp"
+    android:background="#55000000"/>
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txt_vehicleregi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:text="Vehicle Registration"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="#000000"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_vehicleregi"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/ic_action_next"/>
+        <ImageView
+            android:id="@+id/img_vehicleregi_click"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_action_click"/>
+        </RelativeLayout>
+    </LinearLayout>
+        <View
+            android:id="@+id/view_driver_6"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#55000000"
+             android:layout_marginTop="@dimen/_8sdp"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:layout_gravity="bottom">
+
+        <View
+            android:id="@+id/view_driver_7"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#b8000000"
+            android:layout_marginTop="@dimen/_8sdp"/>
+
+        <Button
+            android:id="@+id/btn_driver_continue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="#000000"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_15sdp"
+            android:text="continue"/>
+        </LinearLayout>
+    </LinearLayout>
+

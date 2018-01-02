@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.archirayan.cabsbookdriver.activity.Pastweeks">
+
+    <LinearLayout
+        android:id="@+id/linear_pastweeks"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_backpress"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:src="@drawable/ic_cancle"
+            android:layout_marginTop="@dimen/_3sdp"/>
+
+        <TextView
+            android:id="@+id/txt_pastweek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:text="Past Weeks"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycleview_pastweel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

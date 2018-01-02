@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.archirayan.cabsbookdriver">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+    <uses-permission android:name="com.example.archirayan.cabsbook.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.DriverSignIn" />
+        <activity android:name=".activity.DriverSignup" />
+        <activity
+            android:name=".activity.Documents"
+            android:label="@string/document"
+            android:theme="@style/Document" />
+        <activity
+            android:name=".activity.DriverLicense"
+            android:label="@string/licence"
+            android:theme="@style/Document" />
+        <activity
+            android:name=".activity.DriverLicenseBackside"
+            android:label="@string/licenceback"
+            android:theme="@style/Document" />
+        <activity
+            android:name=".activity.VehicleInsurance"
+            android:label="@string/licenceinsur"
+            android:theme="@style/Document" />
+        <activity
+            android:name=".activity.VehiclePermit"
+            android:label="@string/licencepermit"
+            android:theme="@style/Document" />
+        <activity
+            android:name=".activity.VehicleRegistration"
+            android:label="@string/licenceregi"
+            android:theme="@style/Document" />
+        <activity android:name=".activity.DriverMainPage" />
+        <activity android:name=".activity.EditAccount" />
+        <activity android:name=".activity.OTPActivity" />
+        <activity android:name=".activity.WeeklySummary" />
+        <activity android:name=".activity.Pastweeks" />
+        <activity android:name=".activity.TransactionsActivity" />
+        <activity android:name=".activity.help.EarningsHelp" />
+        <activity android:name=".activity.help.one.EarningsHelpOne" />
+        <activity android:name=".activity.help.Two.EarningsHelpTwo" />
+        <activity android:name=".activity.help.EarningsHelpThree" />
+        <activity android:name=".activity.help.EarningsHelpFour" />
+        <activity android:name=".activity.help.EarningsHelpFive" />
+        <activity android:name=".activity.help.EarningsHelpSix" />
+        <activity android:name=".activity.help.EarningsHelpSeven" />
+        <activity android:name=".activity.help.EarningsHelpEight" />
+        <activity android:name=".activity.help.EarningsHelpNine" />
+        <activity android:name=".activity.help.one.HelpOne_Module_1" />
+        <activity android:name=".activity.help.one.HelpOne_Module_2" />
+        <activity android:name=".activity.help.Two.HelpTwo_Module_1" />
+        <activity android:name=".activity.help.Two.HelpTwo_Module_2" />
+        <activity android:name=".activity.RatinsDetailsactivity" />
+        <activity android:name=".activity.AcceptanceDetails" />
+        <activity android:name=".activity.CancellationDetailsactivity" />
+        <activity android:name=".activity.RiderCompliments" />
+        <activity android:name=".activity.InvitesActivity" />
+        <activity android:name=".activity.CurrentTrips" />
+        <activity android:name=".activity.PreferenceTrip" />
+        <activity android:name=".activity.SetDestinationDriver" />
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+
+        <activity android:name=".activity.VehicleInformation" />
+        <activity android:name=".activity.DriverProfile" />
+
+        <service android:name=".firebase.MyAndroidFirebaseMsgService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".firebase.MyAndroidFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".activity.WaybillActivity" />
+        <activity android:name=".activity.DriverprofilesettingActivity" />
+        <activity android:name=".activity.NavigationProvider" />
+        <activity android:name=".activity.DriverprofileContacts" />
+        <activity android:name=".activity.DriverAccessibilitysetting" />
+        <activity android:name=".activity.DriverShareMytrrip" />
+        <activity android:name=".activity.DriverAboutActivity" />
+        <activity android:name=".activity.DriverDocumentsActivity" />
+        <activity android:name=".activity.DriverSoftwerLicensnceViewActivity" />
+        <activity android:name=".UberdocumentdriverActivity" />
+        <activity android:name=".activity.DriverProfileSetLanguageActivity" />
+        <activity android:name=".Demo" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activity.CurrentTripforshowlocation"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".activity.UserContectActivity" />
+        <activity
+            android:name=".StarttoPickupPointActivity"
+            android:label="@string/title_activity_startto_pickup_point" />
+        <activity android:name=".activity.driverhelp.DriverAccountHelpActivity"></activity>
+        <activity
+            android:name=".activity.PickuoPointToDropoffPoint"
+            android:label="@string/title_activity_pickuo_point_to_dropoff_point"></activity>
+        <activity android:name=".activity.DriverProfileSetCountryActivity"></activity>
+        <activity android:name=".activity.DriverProfileRecommandedCityActivity"></activity>
+        <activity android:name=".activity.DriverProfileFunfactActivity"></activity>
+        <activity android:name=".activity.DriverProfileSetYourselfActivity"></activity>
+        <activity android:name=".activity.DriverProfileSetFavouritStory"></activity>
+
+    </application>
+
+</manifest>

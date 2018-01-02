@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="Reset Password"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="22sp" />
+
+        <View
+            android:id="@+id/Seperator23"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ret_text"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/txt_message"
+            android:layout_width="match_parent"
+            android:layout_height="70dip"
+            android:layout_margin="5dip"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="An email has been sent to you with a new password"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="Ok"
+            android:textAllCaps="false"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

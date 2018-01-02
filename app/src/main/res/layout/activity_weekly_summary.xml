@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.archirayan.cabsbookdriver.activity.WeeklySummary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:id="@+id/linear_weekly"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_backpress"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:src="@drawable/ic_back_white"
+                android:layout_marginTop="@dimen/_3sdp"/>
+
+            <TextView
+                android:id="@+id/txt_titleweekly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp"
+                android:text="WEEKLY SUMMARY"
+                android:layout_marginTop="@dimen/_5sdp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_weeklypage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txt_weeklydates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nov 27 - Dec 4"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#36A1D7"
+                android:textSize="@dimen/_18sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_bottomactivity"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_bottom"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <LinearLayout
+                android:id="@+id/linear_graph"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:orientation="vertical"
+                android:background="#1f050505">
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/linechart"
+                    android:layout_width="@dimen/_250sdp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_weeklyamount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_weeklytext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WEEKLY EARNINGS"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txt_weeklytxtamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_25sdp"/>
+
+
+            </LinearLayout>
+            <View
+                android:id="@+id/view_weekly_1"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#55000000"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <LinearLayout
+                android:id="@+id/linear_txtearnings"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_earningsyet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:textSize="@dimen/_16sdp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/view_weekly_2"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#55000000"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_15sdp"/>
+
+            <LinearLayout
+                android:id="@+id/linear_direct_deposit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_direct_deposit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="Expected Direct Deposit"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16sdp"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt_amountdeposit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="@dimen/_16sdp"
+                        android:textColor="@color/black"
+                        android:text="0.00"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <View
+                android:id="@+id/view_weekly_3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_12sdp"
+                android:background="#1f050505"/>
+            <LinearLayout
+                android:id="@+id/linear_transaction"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_transaction"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:src="@drawable/ic_transactionicon"/>
+
+                <TextView
+                    android:id="@+id/txt_transaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:text="Transactions"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_transactionnext"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_action_next"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <View
+                android:id="@+id/view_weekly_4"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#55000000"/>
+            <LinearLayout
+                android:id="@+id/linear_tripandonline"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/linear_triponline"
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/txt_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0min"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_15sdp"/>
+                    <TextView
+                        android:id="@+id/txt_timeonline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TIME ONLINE"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_gravity="center" />
+
+                </LinearLayout>
+                <View
+                    android:id="@+id/view_weekly_5"
+                    android:layout_width="0.1dp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:background="#55000000" />
+
+                <LinearLayout
+                    android:id="@+id/linear_trips"
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/txt_numberoftrip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_15sdp"/>
+                    <TextView
+                        android:id="@+id/txt_trips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TRIPS"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_gravity="center" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:id="@+id/view_weekly_6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_12sdp"
+                android:background="#1f050505"/>
+            <LinearLayout
+                android:id="@+id/linear_earningshelp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_earningshelp"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:src="@drawable/ic_help"/>
+
+                <TextView
+                    android:id="@+id/txt_earningshelp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:text="Earnings Help"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_earningshelpnext"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:src="@drawable/ic_action_next"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+            <View
+                android:id="@+id/view_weekly_7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_12sdp"
+                android:background="#1f050505"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

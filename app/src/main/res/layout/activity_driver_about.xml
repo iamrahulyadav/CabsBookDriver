@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightdark"
+    android:orientation="vertical"
+    tools:context="com.example.archirayan.cabsbookdriver.activity.DriverAboutActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_acceptance_tital"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="#000000"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_back_acceptance_tital"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/txt_acceptance_tital"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="About"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_18sdp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/llayout_softwerlicense"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="Softwer Licenses"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:background="@drawable/ic_arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="About this version"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="v1.148.1005"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

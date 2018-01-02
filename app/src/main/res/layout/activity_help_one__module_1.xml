@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#36dacfcf"
+    tools:context="com.example.archirayan.cabsbookdriver.activity.help.one.HelpOne_Module_1">
+
+    <LinearLayout
+        android:id="@+id/linear_help_modul_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="#000000"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/img_back_helpactivity2"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/ic_back_white"/>
+
+        <TextView
+            android:id="@+id/txt_tital_modul_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:textSize="@dimen/_20sdp"
+            android:text="Help"
+            android:layout_marginTop="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_module_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="#000000"
+                android:text="I'm unable to go inline (Android)"/>
+
+            <TextView
+                android:id="@+id/txt_module_line_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#000000"
+                android:text="If you are unable to go online, a few account issues may be stopping you:"/>
+
+            <TextView
+                android:id="@+id/txt_module_line_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#000000"
+                android:text="- Your documents have expired"/>
+            <TextView
+                android:id="@+id/txt_module_line_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#000000"
+                android:text="- You are delivering autside the service area of your sign-up city"/>
+            <TextView
+                android:id="@+id/txt_module_line_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#000000"
+                android:text="- You recently uploded new documents and they are pending review"/>
+            <TextView
+                android:id="@+id/txt_module_line_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#000000"
+                android:text="- You have not downloaded the newest version of the CabsBook Partner app"/>
+            <TextView
+                android:id="@+id/txt_module_line_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#000000"
+                android:text="- Your account is on hold due to a reported accident or incident"/>
+            <TextView
+                android:id="@+id/txt_module_line_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#000000"
+                android:text="- Your location settings may be turned off, or you may be experiencing a network issue. Basic troubleshooting tips can be found below"/>
+            <TextView
+                android:id="@+id/txt_module_line_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#000000"
+                android:text="The 5 R's:"/>
+            <TextView
+                android:id="@+id/txt_module_line_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#000000"
+                android:text="- Restart(app)"/>
+            <TextView
+                android:id="@+id/txt_module_line_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#000000"
+                android:text="- Retry"/>
+            <TextView
+                android:id="@+id/txt_module_line_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#000000"
+                android:text="- Restart(phone)"/>
+            <TextView
+                android:id="@+id/txt_module_line_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#000000"
+                android:text="- Reset(network settings)"/>
+            <TextView
+                android:id="@+id/txt_module_line_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#000000"
+                android:text="- Reinstall the driver app"/>
+            <TextView
+                android:id="@+id/txt_module_line_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#000000"
+                android:text="Other PRO TIPS:"/>
+
+            <TextView
+                android:id="@+id/txt_module_line_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#000000"
+                android:text="- Log out of the app for about 2 minutes then log back in."/>
+            <TextView
+                android:id="@+id/txt_module_line_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#000000"
+                android:text="- Check for phone software updates"/>
+
+            <TextView
+                android:id="@+id/txt_module_line_17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="#000000"
+                android:text="If you're still unable to go online after troubleshooting, share some info with us here."/>
+
+
+            <LinearLayout
+                android:id="@+id/linear_txt_getintouch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="#19000000">
+
+                <TextView
+                    android:id="@+id/txt_module_line_18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="#000000"
+                    android:text="GET IN TOUCH"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_msgus"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_msgus"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:src="@drawable/ic_msg"/>
+
+                <TextView
+                    android:id="@+id/txt_messageus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    android:text="Message Us"/>
+
+
+
+            </LinearLayout>
+            <View
+                android:id="@+id/view_helpsub_1"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#55000000"/>
+
+            <LinearLayout
+                android:id="@+id/linear_visitus"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_visitus"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:src="@drawable/ic_visit"/>
+
+                <TextView
+                    android:id="@+id/txt_visitus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    android:text="Visit Us In Person"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_msgus_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/txt_enterdetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    android:text="ENTER DETAILS"
+                    android:layout_marginTop="@dimen/_15sdp"/>
+
+                <EditText
+                    android:id="@+id/edit_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txt_screenshort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp"
+                    android:text="SCREENSHOT OF YOUR APP"
+                    android:layout_marginTop="@dimen/_15sdp"/>
+
+
+                <ImageView
+                    android:id="@+id/img_screenshot"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    android:text="submit"
+                    android:layout_marginBottom="@dimen/_15sdp"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

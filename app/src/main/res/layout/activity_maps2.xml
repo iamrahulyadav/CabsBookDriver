@@ -1,0 +1,201 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/img_back_trip_close"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:src="@drawable/ic_cancle"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp"
+            android:text="Current Trips"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:text="WAYBILL"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="#3f49fa"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_user_details"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_userpic"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/ic_profile"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+        <TextView
+            android:id="@+id/txt_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/black"
+            android:text="name"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_cancle"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:layout_marginTop="@dimen/_15sdp"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/view_sixth_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#55000000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_60sdp"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_start_car"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:src="@drawable/imagesreplace" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Start"
+                    android:textColor="#111DE5"
+                    android:textSize="@dimen/_15sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_pickup_car"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:src="@drawable/imagecar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Pick up"
+                    android:textColor="#111DE5"
+                    android:textSize="@dimen/_15sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_dropoff_car"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:src="@drawable/imagecar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Drop off"
+                    android:textColor="#111DE5"
+                    android:textSize="@dimen/_15sdp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.archirayan.cabsbookdriver.activity.CurrentTripforshowlocation" />
+
+</LinearLayout>

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/account"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_weight"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:id="@+id/linear_account_profilimg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linear_profilcontent"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_profile"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:src="@drawable/ic_profile" />
+
+            <TextView
+                android:id="@+id/txt_person_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="ARCHIRATAN"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+            <TextView
+                android:id="@+id/txt_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="EDIT"
+                android:textColor="@color/lite"
+                android:textSize="@dimen/_13sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_1"
+            android:layout_width="0.2dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/linear_vihical"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_vihical"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:src="@drawable/carprofile" />
+
+            <TextView
+                android:id="@+id/txt_vihical_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="SELECT A VEHICLE"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+            <TextView
+                android:id="@+id/change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="CHANGE"
+                android:textColor="@color/lite"
+                android:textSize="@dimen/_13sdp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/linear_prifile_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="#faefef"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_driverprofile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_1"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_profile" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_driverprofile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Driver Profile"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <TextView
+                        android:id="@+id/txt_driverditails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Your riders will see this"
+                        android:textSize="@dimen/_13sdp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_3"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_action_next" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_dark" />
+
+
+            <LinearLayout
+                android:id="@+id/linear_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_2"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_help" />
+
+                <TextView
+                    android:id="@+id/txt_help"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Help"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <ImageView
+                    android:id="@+id/img_4"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_action_next" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_dark" />
+
+
+            <LinearLayout
+                android:id="@+id/linear_waybill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_5"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_waybill" />
+
+                <TextView
+                    android:id="@+id/txt_willbill"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Waybill"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <ImageView
+                    android:id="@+id/img_6"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_action_next" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_dark" />
+
+
+            <LinearLayout
+                android:id="@+id/linear_doc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_7"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_doc" />
+
+                <TextView
+                    android:id="@+id/txt_doc"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Documents"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <ImageView
+                    android:id="@+id/img_8"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_action_next" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_dark" />
+
+
+            <LinearLayout
+                android:id="@+id/linear_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_9"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_setting" />
+
+                <TextView
+                    android:id="@+id/txt_setting"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Settings"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <ImageView
+                    android:id="@+id/img_10"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_action_next" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_dark" />
+
+
+            <LinearLayout
+                android:id="@+id/linear_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_11"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_about" />
+
+                <TextView
+                    android:id="@+id/txt_about"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="About"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <ImageView
+                    android:id="@+id/img_12"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_action_next" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_8"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_dark" />
+
+
+            <LinearLayout
+                android:id="@+id/linear_signout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/light_dark" />
+
+                <TextView
+                    android:id="@+id/txt_signout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Sign Out"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

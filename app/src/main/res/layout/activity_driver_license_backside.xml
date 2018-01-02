@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.archirayan.cabsbookdriver.activity.DriverLicenseBackside">
+
+    <TextView
+        android:id="@+id/txt_takeyour_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:textColor="#000000"
+        android:textSize="@dimen/_20sdp"
+        android:text="Take a photo of your"/>
+
+    <TextView
+        android:id="@+id/txt_drivinglicback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:textColor="#000000"
+        android:textSize="@dimen/_20sdp"
+        android:text="Driver License - Backside"/>
+
+    <TextView
+        android:id="@+id/txt_intractiontake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:textSize="@dimen/_13sdp"
+        android:text="Please make sure we can easily read all the details."/>
+
+    <LinearLayout
+        android:id="@+id/linear_takeAphoto_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/img_takeAphoto_back"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:src="@drawable/photodriver"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/img_photocamera_back"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/ic_camera"/>
+            <TextView
+                android:id="@+id/txt_taptoadd_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="TAP TO ADD"
+                android:textSize="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:textColor="#2E99E5"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.archirayan.cabsbookdriver.activity.DriverMainPage">
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/black"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_goonline"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/btn_bg_go_online"
+                android:text="Go online"
+                android:textColor="#9BE5E3"
+                android:textSize="@dimen/_15sdp"
+                tools:ignore="RtlCompat" />
+
+            <Button
+                android:id="@+id/btn_online"
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/btn_bg_go_online"
+                android:text="online"
+                android:textColor="#9BE5E3"
+                android:textSize="@dimen/_15sdp"
+                android:visibility="gone"
+                tools:ignore="RtlCompat" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_activity_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <include
+                        android:id="@+id/home"
+                        layout="@layout/home" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_activity_earning"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/earnings"
+                        layout="@layout/earnings" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear_activity_rating"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/rating"
+                        layout="@layout/ratings" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_activity_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/account"
+                        layout="@layout/account" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/linear_home"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:src="@drawable/ic_home" />
+
+                <TextView
+                    android:id="@+id/txt_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="HOME"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_earnings"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_earnings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:src="@drawable/ic_earnings" />
+
+                <TextView
+                    android:id="@+id/txt_earnings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="EARNINGS"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_rating"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+
+                    android:src="@drawable/ic_ratings" />
+
+                <TextView
+                    android:id="@+id/txt_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="RATINGS"
+
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_account"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:src="@drawable/ic_account" />
+
+                <TextView
+                    android:id="@+id/txt_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="ACCOUNT"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

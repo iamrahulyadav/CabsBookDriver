@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.archirayan.cabsbookdriver.activity.DriverDocumentsActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_acceptance_tital"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="#000000"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_back_acceptance_tital"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/txt_acceptance_tital"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Documents"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_18sdp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:text="Driver Documents"
+                android:textAllCaps="true"
+                android:background="@color/lightdark"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/llayout_driverlicense"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Driver License"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txt_doc_licensetype"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_8sdp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_doc_licensetype"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_dark" />
+
+
+            <LinearLayout
+                android:id="@+id/llayout_photo_policeverficertificat"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Police Verification Certificate"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txt_doc_policeverficerti"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_8sdp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_doc_policeverficerti"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_dark" />
+
+
+            <LinearLayout
+                android:id="@+id/llayout_photo_bgc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="BGC"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txt_doc_bgc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_8sdp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_doc_bgc"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_dark" />
+
+
+            <LinearLayout
+                android:id="@+id/llayout_drivinglicensebackside"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Driver License - Backside"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txt_doc_licensebackside"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_8sdp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_doc_backsidelicense"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_dark" />
+
+
+            <LinearLayout
+                android:id="@+id/llayout_noc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="No Objection Certificate (NOC)"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txt_doc_noc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_8sdp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_doc_noc"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_dark" />
+
+
+            <LinearLayout
+                android:id="@+id/llayout_mandateform"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Mandate Form"
+
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txt_doc_mandateform"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_8sdp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_doc_mandateform"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_dark" />
+
+            <LinearLayout
+                android:id="@+id/llayout__doc_pancard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="Pan Card"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txt_doc_pancard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_8sdp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_doc_pancard"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_dark" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:background="@color/lightdark"
+                android:text="Uber other other Documents"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/llayout_vehicleregistartion"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="Vehicle Registration"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txt_doc_vehicalregistartion"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_8sdp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_doc_vehicalregistartion"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_dark" />
+
+            <LinearLayout
+                android:id="@+id/llayout_vehicalinsurance"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Vehicle insurance"
+                        android:textColor="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/txt_doc_vehicaleinsurance"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_8sdp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_doc_vehicalinsurance"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_dark" />
+
+
+            <LinearLayout
+                android:id="@+id/llayout_vehicalpermit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="Vehicel Permit"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txt_doc_vehicalpermit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_8sdp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_doc_vehicalpermit"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_dark" />
+
+            <LinearLayout
+                android:id="@+id/llayout__doc_loanemi"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:text="Vehicle Loan Emi Details"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txt_doc_vehicalloanemi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_8sdp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_doc_vehicalloanemi"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_dark" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

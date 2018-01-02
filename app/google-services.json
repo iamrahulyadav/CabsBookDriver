@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "581837894850",
+    "firebase_url": "https://mapshaili.firebaseio.com",
+    "project_id": "mapshaili",
+    "storage_bucket": "mapshaili.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581837894850:android:0ce79171b488741f",
+        "android_client_info": {
+          "package_name": "com.example.archirayan.cabsbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581837894850-nmlj8ptletl7rv7b8ron6n8alvrjcl3r.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "581837894850-f4elujoaei7ufl20nqv407gbfpcrhec3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.archirayan.cabsbook",
+            "certificate_hash": "d0ec15992e2ae0b5844b7592f20ec6b2b5db1246"
+          }
+        },
+        {
+          "client_id": "581837894850-crinib2m2cvobfnn7h8bkhrr92m52od2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCentTKdDYWiiS6Cy5A-EUHRJttPIPSyc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581837894850-nmlj8ptletl7rv7b8ron6n8alvrjcl3r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581837894850:android:8496d286b7a94c38",
+        "android_client_info": {
+          "package_name": "com.example.archirayan.cabsbookdriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581837894850-2sam22hin18svkmku4m6vsvibc3ab66m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.archirayan.cabsbookdriver",
+            "certificate_hash": "d0ec15992e2ae0b5844b7592f20ec6b2b5db1246"
+          }
+        },
+        {
+          "client_id": "581837894850-nmlj8ptletl7rv7b8ron6n8alvrjcl3r.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "581837894850-crinib2m2cvobfnn7h8bkhrr92m52od2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCentTKdDYWiiS6Cy5A-EUHRJttPIPSyc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581837894850-nmlj8ptletl7rv7b8ron6n8alvrjcl3r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:gravity="center_vertical|center_horizontal"
+    tools:context="com.example.archirayan.cabsbookdriver.activity.Splash">
+
+    <ImageView
+        android:id="@+id/img_splash"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:src="@mipmap/ic_launcher_round" />
+</LinearLayout>

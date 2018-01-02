@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.archirayan.cabsbookdriver.activity.DriverprofilesettingActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_acceptance_tital"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="#000000"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_back_acceptance_tital"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/txt_acceptance_tital"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Settings"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_16sdp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="ScrollViewSize">
+
+        <TextView
+            android:id="@+id/txt_driverprofile_navigationprofile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/driverprofile_navigationprovider"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/light_dark" />
+
+
+        <TextView
+            android:id="@+id/driver_accessibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/driverprofile_accessibility"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/light_dark" />
+
+
+        <TextView
+            android:id="@+id/driver_sharemytrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/driverprofile_sharemytrip"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/light_dark" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/driverprofile_volume"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp" />
+
+        <SeekBar
+            android:id="@+id/notifyvlmseekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/driverprofile_notification"
+            android:textColor="@color/theme_primary"
+            android:textSize="@dimen/_13sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/driverprofile_accountstatus"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10sdp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_driverprofile_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/driverprofile_contacts"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/light_dark" />
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

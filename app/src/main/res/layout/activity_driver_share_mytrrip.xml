@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.archirayan.cabsbookdriver.activity.DriverShareMytrrip">
+
+    <LinearLayout
+        android:id="@+id/linear_acceptance_tital"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="#000000"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_back_acceptance_tital"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/txt_acceptance_tital"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Share my trip"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_16sdp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            android:background="@drawable/img_sharemytrip" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="New : Share My Trip"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Easily share where you are with friends and family."
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="bottom|center_vertical"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:background="@color/black"
+                android:text="Learn More"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

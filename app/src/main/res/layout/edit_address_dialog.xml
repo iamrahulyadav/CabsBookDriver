@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="400dp">
+
+    <EditText
+        android:id="@+id/edit_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:hint="ADDRESS"
+        android:layout_marginTop="@dimen/_15sdp"/>
+
+    <EditText
+        android:id="@+id/edit_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:hint="CITY"
+        android:layout_marginTop="@dimen/_15sdp"/>
+
+    <EditText
+        android:id="@+id/edit_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:hint="STATE"
+        android:layout_marginTop="@dimen/_15sdp"/>
+
+    <EditText
+        android:id="@+id/edit_pincode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:hint="POSTAL CODE"
+        android:layout_marginTop="@dimen/_15sdp"/>
+
+    <Button
+        android:id="@+id/btn_save_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:background="@color/black"
+        android:text="save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_30sdp"/>
+
+</LinearLayout>
