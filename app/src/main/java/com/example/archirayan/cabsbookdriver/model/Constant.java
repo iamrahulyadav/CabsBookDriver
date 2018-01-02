@@ -55,4 +55,5 @@ public class Constant {
     public static final String DATA_FUNFACT = "data_funfact";
     public static final String DATA_YOURSELF = "data_yourself";
     public static final String DATA_CITY_EDIT = "data_city_edit";
+    public static final String HELP_FIRST_FIRSTPAGE = "help_first_FIRSTPAGE";
 }

@@ -84,10 +84,6 @@ public class VehicleInformation extends AppCompatActivity implements AdapterView
                 Log.e(TAG, "Driver RESPONSE-" + response);
                 GetVehicleTypeResponse dmodel = new Gson().fromJson(new String(String.valueOf(response)), GetVehicleTypeResponse.class);
                 if (dmodel.getStatus().equalsIgnoreCase("true")) {
-                    getVehicleTypes = dmodel.getData();
-                    SpinnerAdapter customAdapter=new SpinnerAdapter(VehicleInformation.this,getVehicleTypes);
-                    spinner_vehicle_type.setAdapter(customAdapter);
-
 
                 }
             }
