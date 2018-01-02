@@ -82,12 +82,19 @@ public class CurrentTripforshowlocation extends FragmentActivity implements OnMa
     private String str_Address,str_Address_two;
     private double latitude1;
     private double longitude1;
+    private String str_detination_address;
+    private double tolatitude;
+    private double tolongitude;
+    private LatLng destination;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps2);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+
+        str_detination_address = Utils.ReadSharePrefrence(CurrentTripforshowlocation.this, com.example.archirayan.cabsbookdriver.model.Constant.USER_DETINATION).toString();
+
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -149,10 +156,74 @@ public class CurrentTripforshowlocation extends FragmentActivity implements OnMa
         else {
             Log.d("onCreate","Google Play Services available.");
         }
+        getAddressLocation();
 
 
     }
 
+    @SuppressLint("LongLogTag")
+    private void getAddressLocation() {
+        AsyncHttpClient client = new AsyncHttpClient();
+        RequestParams params = new RequestParams();
+
+        Log.e(TAG, params.toString());
+        client.get(CurrentTripforshowlocation.this, "https://maps.googleapis.com/maps/api/geocode/json?address="+str_detination_address+"&key=AIzaSyDP_V1qgIXwLN-mZ_BVIt4BnN4z8aVY198", new JsonHttpResponseHandler() {
+            @Override
+            public void onStart() {
+                super.onStart();
+            }
+
+            @Override
+            public void onFinish() {
+
+                super.onFinish();
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                super.onSuccess(statusCode, headers, response);
+                Log.e(TAG, "RESPONSE-" + response);
+                try {
+                    JSONObject jsonObject = new JSONObject(String.valueOf(response));
+                    JSONArray jsonArray = jsonObject.getJSONArray("results");
+                    JSONObject jsonObj = jsonArray.getJSONObject(0);
+                    JSONObject jsonArray1 = jsonObj.getJSONObject("geometry");
+                    JSONObject jsonObject1 = jsonArray1.getJSONObject("location");
+                    tolatitude = jsonObject1.getDouble("lat");
+                    Log.e(TAG,"LATITUDE" +tolatitude);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    JSONObject jsonObject = new JSONObject(String.valueOf(response));
+                    JSONArray jsonArray = jsonObject.getJSONArray("results");
+                    JSONObject jsonObj = jsonArray.getJSONObject(0);
+                    JSONObject jsonArray1 = jsonObj.getJSONObject("geometry");
+                    JSONObject jsonObject1 = jsonArray1.getJSONObject("location");
+                    tolongitude = jsonObject1.getDouble("lng");
+                    Log.e(TAG,"LATITUDE" +tolongitude);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                destination = new LatLng(tolatitude,tolongitude);
+                Log.e(TAG,"LATLNG_detination" +destination);
+                route();
+
+
+
+
+
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                super.onFailure(statusCode, headers, responseString, throwable);
+                Log.e(TAG, throwable.getMessage());
+
+            }
+        });
+    }
 
 
     /**
@@ -196,8 +267,8 @@ public class CurrentTripforshowlocation extends FragmentActivity implements OnMa
         options.position(latLng);
         mMap.addMarker(options);
 
-        latitude1 = 23.0288156;
-        longitude1 = 72.5907148;
+        latitude1 = Double.parseDouble(Utils.ReadSharePrefrence(CurrentTripforshowlocation.this, Constant.USER_LATITUDE));
+        longitude1 = Double.parseDouble(Utils.ReadSharePrefrence(CurrentTripforshowlocation.this, Constant.USER_LONGITUTED));;
        // double userlat = Double.parseDouble(Utils.ReadSharePrefrence(CurrentTripforshowlocation.this, Constant.USER_LATITUDE).toString());
         //double userlng = Double.parseDouble(Utils.ReadSharePrefrence(CurrentTripforshowlocation.this, Constant.USER_LONGITUTED).toString());
 
@@ -211,7 +282,7 @@ public class CurrentTripforshowlocation extends FragmentActivity implements OnMa
 
         mMap.moveCamera(centertwo);
         mMap.animateCamera(zoom);
-        route();
+
 
         Log.d("onLocationChanged", String.format("latitude:%.3f longitude:%.3f",latitude,latitude));
 
@@ -424,7 +495,7 @@ public class CurrentTripforshowlocation extends FragmentActivity implements OnMa
                 .travelMode(AbstractRouting.TravelMode.DRIVING)
                 .withListener(this)
                 .alternativeRoutes(true)
-                .waypoints(latLng,latLng1)
+                .waypoints(latLng,latLng1,destination)
                 .build();
         routing.execute();
 

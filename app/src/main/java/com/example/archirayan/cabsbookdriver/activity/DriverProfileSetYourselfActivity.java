@@ -20,7 +20,6 @@ public class DriverProfileSetYourselfActivity extends AppCompatActivity implemen
     public Button btn_saveyourself;
     public String str_driveryourself, str_Driveryourself;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

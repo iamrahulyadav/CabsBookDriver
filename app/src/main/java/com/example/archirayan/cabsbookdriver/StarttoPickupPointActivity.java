@@ -176,8 +176,8 @@ public class StarttoPickupPointActivity extends FragmentActivity implements OnMa
         options.position(latLng);
         mMap.addMarker(options);
 
-        latitude1 = 23.0288156;
-        longitude1 = 72.5907148;
+        latitude1 = Double.parseDouble(Utils.ReadSharePrefrence(StarttoPickupPointActivity.this, Constant.USER_LATITUDE));;
+        longitude1 = Double.parseDouble(Utils.ReadSharePrefrence(StarttoPickupPointActivity.this, Constant.USER_LONGITUTED));;
 
         latLng1 = new LatLng(latitude1,longitude1);
         route();
