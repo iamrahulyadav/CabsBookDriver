@@ -2,6 +2,7 @@ package com.example.archirayan.cabsbookdriver;
 
 import android.*;
 import android.Manifest;
+import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -128,6 +129,23 @@ public class StarttoPickupPointActivity extends FragmentActivity implements OnMa
         });
 
         seekbar_destance = (SeekBar) findViewById(R.id.seekbar_destance);
+
+        seekbar_destance.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
 
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             checkLocationPermission();

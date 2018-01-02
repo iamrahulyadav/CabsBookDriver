@@ -1,6 +1,7 @@
 package com.example.archirayan.cabsbookdriver.activity;
 
 import android.Manifest;
+import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -15,6 +16,7 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -76,7 +78,7 @@ public class CurrentTripforshowlocation extends FragmentActivity implements OnMa
     private static final int[] COLORS = new int[]{R.color.primary_dark, R.color.primary, R.color.primary_light, R.color.accent, R.color.primary_dark_material_light};
     private ImageView img_userpic,img_cancle,img_back_trip_close;
     private String getImageStr;
-    private TextView txt_username;
+    private TextView txt_username,txt_waybill;
     private LinearLayout linear_user_details;
     private CircleImageView img_start_car,img_pickup_car,img_dropoff_car;
     private String str_Address,str_Address_two;
@@ -143,6 +145,14 @@ public class CurrentTripforshowlocation extends FragmentActivity implements OnMa
 
         txt_username = (TextView) findViewById(R.id.txt_username);
         txt_username.setText(Utils.ReadSharePrefrence(CurrentTripforshowlocation.this, Constant.NAME));
+
+        txt_waybill = (TextView) findViewById(R.id.txt_waybill);
+        txt_waybill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CurrentTripforshowlocation.this,WaybillActivity.class));
+            }
+        });
 
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             checkLocationPermission();
@@ -548,6 +558,11 @@ public class CurrentTripforshowlocation extends FragmentActivity implements OnMa
         options.icon(BitmapDescriptorFactory.defaultMarker());
         mMap.addMarker(options);
 
+        options = new MarkerOptions();
+        options.position(destination);
+        options.icon(BitmapDescriptorFactory.defaultMarker()).title(str_detination_address);
+        mMap.addMarker(options);
+
 
         CameraUpdate centertwo = CameraUpdateFactory.newLatLng(latLng1);
         CameraUpdate zoom = CameraUpdateFactory.zoomTo(12.5f);
@@ -555,6 +570,7 @@ public class CurrentTripforshowlocation extends FragmentActivity implements OnMa
 
         mMap.moveCamera(centertwo);
         mMap.animateCamera(zoom);
+
 
     }
 
