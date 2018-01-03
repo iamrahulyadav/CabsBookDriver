@@ -21,13 +21,12 @@ public class SpinnerAdapter extends BaseAdapter {
 
     Context context;
     private ArrayList<GetVehicleType> getVehicleTypes;
-    LayoutInflater inflter;
+
 
     public SpinnerAdapter(VehicleInformation vehicleInformation, ArrayList<GetVehicleType> getVehicleTypes) {
-        this.context = context;
+        this.context = vehicleInformation;
         this.getVehicleTypes = getVehicleTypes;
-        this.inflter = inflter;
-        inflter = (LayoutInflater.from(context));
+
     }
 
     @Override
@@ -50,7 +49,8 @@ public class SpinnerAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        convertView = inflter.inflate(R.layout.spinner_vehical_type, null);
+        LayoutInflater inflater = LayoutInflater.from(context);
+        convertView = inflater.inflate(R.layout.spinner_vehical_type, null);
         /*ImageView icon = (ImageView) view.findViewById(R.id.imageView);*/
         TextView names = (TextView) convertView.findViewById(R.id.textView);
         names.setText(getVehicleTypes.get(position).getType());

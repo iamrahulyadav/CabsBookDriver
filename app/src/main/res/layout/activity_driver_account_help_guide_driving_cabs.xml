@@ -61,7 +61,7 @@
                     <ImageView
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
-                        android:background="@mipmap/ic_star_ico"
+                        android:background="@drawable/ic_star_ico"
                         android:gravity="center_vertical"
                         android:visibility="gone" />
 
@@ -91,7 +91,7 @@
                     <ImageView
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
-                        android:background="@mipmap/ic_buy_delivery"
+                        android:background="@drawable/ic_buy_delivery"
                         android:gravity="center_vertical"
                         android:visibility="gone" />
 
@@ -121,7 +121,7 @@
                     <ImageView
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
-                        android:background="@mipmap/ic_creditcard_paymnt"
+                        android:background="@drawable/ic_creditcard_paymnt"
                         android:gravity="center_vertical"
                         android:visibility="gone" />
 
@@ -151,7 +151,7 @@
                     <ImageView
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
-                        android:background="@mipmap/ic_car_wheelsigninup"
+                        android:background="@drawable/ic_car_wheelsigninup"
                         android:gravity="center_vertical"
                         android:visibility="gone" />
 
@@ -180,7 +180,7 @@
                     <ImageView
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
-                        android:background="@mipmap/ic_morehelp"
+                        android:background="@drawable/ic_morehelp"
                         android:gravity="center_vertical"
                         android:visibility="gone" />
 
@@ -226,7 +226,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_star_ico"
+                    android:background="@drawable/ic_star_ico"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -255,7 +255,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_buy_delivery"
+                    android:background="@drawable/ic_buy_delivery"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -285,7 +285,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_creditcard_paymnt"
+                    android:background="@drawable/ic_creditcard_paymnt"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -315,7 +315,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_car_wheelsigninup"
+                    android:background="@drawable/ic_car_wheelsigninup"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -361,7 +361,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_star_ico"
+                    android:background="@drawable/ic_star_ico"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -390,7 +390,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_buy_delivery"
+                    android:background="@drawable/ic_buy_delivery"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -420,7 +420,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_creditcard_paymnt"
+                    android:background="@drawable/ic_creditcard_paymnt"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -450,7 +450,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_car_wheelsigninup"
+                    android:background="@drawable/ic_car_wheelsigninup"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -478,7 +478,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_car_wheelsigninup"
+                    android:background="@drawable/ic_car_wheelsigninup"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -507,7 +507,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_car_wheelsigninup"
+                    android:background="@drawable/ic_car_wheelsigninup"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -535,7 +535,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_car_wheelsigninup"
+                    android:background="@drawable/ic_car_wheelsigninup"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -563,7 +563,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_car_wheelsigninup"
+                    android:background="@drawable/ic_car_wheelsigninup"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -591,7 +591,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_car_wheelsigninup"
+                    android:background="@drawable/ic_car_wheelsigninup"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -619,7 +619,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_car_wheelsigninup"
+                    android:background="@drawable/ic_car_wheelsigninup"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -647,7 +647,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_car_wheelsigninup"
+                    android:background="@drawable/ic_car_wheelsigninup"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -691,7 +691,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_star_ico"
+                    android:background="@drawable/ic_star_ico"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -720,7 +720,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_buy_delivery"
+                    android:background="@drawable/ic_buy_delivery"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -750,7 +750,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_creditcard_paymnt"
+                    android:background="@drawable/ic_creditcard_paymnt"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -780,7 +780,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_car_wheelsigninup"
+                    android:background="@drawable/ic_car_wheelsigninup"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -808,7 +808,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_car_wheelsigninup"
+                    android:background="@drawable/ic_car_wheelsigninup"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -837,7 +837,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_car_wheelsigninup"
+                    android:background="@drawable/ic_car_wheelsigninup"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -882,7 +882,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_star_ico"
+                    android:background="@drawable/ic_star_ico"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -911,7 +911,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_buy_delivery"
+                    android:background="@drawable/ic_buy_delivery"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -941,7 +941,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_creditcard_paymnt"
+                    android:background="@drawable/ic_creditcard_paymnt"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 
@@ -971,7 +971,7 @@
                 <ImageView
                     android:layout_width="@dimen/_30sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:background="@mipmap/ic_car_wheelsigninup"
+                    android:background="@drawable/ic_car_wheelsigninup"
                     android:gravity="center_vertical"
                     android:visibility="gone" />
 

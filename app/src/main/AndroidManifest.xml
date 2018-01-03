@@ -140,7 +140,9 @@
         <activity android:name=".activity.DriverProfileFunfactActivity"></activity>
         <activity android:name=".activity.DriverProfileSetYourselfActivity"></activity>
         <activity android:name=".activity.DriverProfileSetFavouritStory"></activity>
-        <activity android:name=".a"
+        <activity android:name=".activity.driverhelp.DriverAccountHelpGuidDrivingCabs1Activity"></activity>
+        <activity android:name=".activity.driverhelp.DriverAccountHelpGuideDrivingCabsActivity"></activity>
+        
 
     </application>
 

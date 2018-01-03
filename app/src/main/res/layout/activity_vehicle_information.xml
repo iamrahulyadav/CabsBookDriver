@@ -75,6 +75,11 @@
                 android:background="@color/white"
                 android:orientation="vertical">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/txt_first_name"
                     android:layout_width="wrap_content"
@@ -85,15 +90,36 @@
                     android:textColor="@color/black"
                     android:textSize="@dimen/_15sdp" />
 
-                <TextView
-                    android:id="@+id/txt_first"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/txt_vecle_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_10sdp"
-                    android:layout_marginLeft="@dimen/_15sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:text="First Name"
-                    android:textSize="@dimen/_15sdp" />
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner_selcete_make"
+                        android:layout_width="@dimen/_125sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_5sdp"></Spinner>
+
+                    <Spinner
+                        android:id="@+id/spinner_selecete_model"
+                        android:layout_width="@dimen/_125sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_5sdp"></Spinner>
+                </LinearLayout>
             </LinearLayout>
 
             <View
@@ -104,9 +130,14 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@color/white"
                 android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/txt_last_name"
@@ -114,9 +145,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_15sdp"
                     android:layout_marginTop="@dimen/_15sdp"
-                    android:text="Vehicle Type"
+                    android:text="Vehicle Type:"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_15sdp" />
+
+                    <TextView
+                        android:id="@+id/txt_selected_vecle_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:textSize="@dimen/_15sdp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
 
                 <Spinner
                     android:id="@+id/spinner_vehicle_type"
