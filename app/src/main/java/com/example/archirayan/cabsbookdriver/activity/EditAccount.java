@@ -461,6 +461,8 @@ public class EditAccount extends AppCompatActivity {
                 if (dmodel.getStatus().equalsIgnoreCase("true")) {
                     txt_first.setText(dmodel.getData().getFirst_name());
                     txt_last.setText(dmodel.getData().getLast_name());
+                    Utils.WriteSharePrefrence(EditAccount.this,Constant.DriverName,dmodel.getData().getFirst_name()+" "+dmodel.getData().getLast_name());
+                    String drivername = Utils.ReadSharePrefrence(EditAccount.this,Constant.DriverName);
                     txt_edit_phone.setText(dmodel.getData().getMobile_no());
                     Utils.WriteSharePrefrence(EditAccount.this, Constant.PHONE_NUMBER, dmodel.getData().getMobile_no());
                     String phone_num = Utils.ReadSharePrefrence(EditAccount.this, Constant.PHONE_NUMBER);

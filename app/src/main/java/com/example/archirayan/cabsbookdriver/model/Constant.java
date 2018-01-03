@@ -58,4 +58,6 @@ public class Constant {
     public static final String HELP_FIRST_FIRSTPAGE = "help_first_FIRSTPAGE";
     public static final String HELP_MAINPAGE = "help_mainpage";
     public static final String Driver_Trip_Id = "driver_trip_id";
+    public static final String DriverName = "drivername";
+    public static final String PlateNumber = "platename";
 }

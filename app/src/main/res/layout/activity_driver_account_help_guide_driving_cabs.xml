@@ -49,12 +49,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <LinearLayout
+                    android:id="@+id/llayoutguidedriving_help1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/llayoutguidedriving_help1"
                     android:orientation="horizontal"
                     android:padding="@dimen/_12sdp">
 
@@ -82,9 +82,9 @@
 
 
                 <LinearLayout
+                    android:id="@+id/llayoutguidedriving_help2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/llayoutguidedriving_help2"
                     android:orientation="horizontal"
                     android:padding="@dimen/_12sdp">
 
@@ -113,6 +113,7 @@
 
 
                 <LinearLayout
+                    android:id="@+id/llayoutguidedriving_help3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -143,6 +144,7 @@
 
 
                 <LinearLayout
+                    android:id="@+id/llayoutguidedriving_help4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -172,6 +174,7 @@
                     android:background="@color/light_dark" />
 
                 <LinearLayout
+                    android:id="@+id/llayoutguidedriving_help5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -218,6 +221,7 @@
             android:visibility="gone">
 
             <LinearLayout
+                android:id="@+id/llayout_deliveringwithcabshelp1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -247,9 +251,11 @@
 
 
             <LinearLayout
+                android:id="@+id/llayout_deliveringwithcabshelp2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+
                 android:padding="@dimen/_12sdp">
 
                 <ImageView
@@ -277,6 +283,7 @@
 
 
             <LinearLayout
+                android:id="@+id/llayout_deliveringwithcabshelp3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -307,6 +314,7 @@
 
 
             <LinearLayout
+                android:id="@+id/llayout_deliveringwithcabshelp4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"

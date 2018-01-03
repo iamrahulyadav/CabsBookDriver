@@ -1,6 +1,7 @@
 package com.example.archirayan.cabsbookdriver.activity;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -68,6 +69,7 @@ public class VehicleInformation extends AppCompatActivity implements AdapterView
     private CircleImageView img_carPorifile;
     private int REQUEST_CAMERA = 0, SELECT_FILE = 1, FILTER_IMAGE = 400;
     private LinearLayout linear_info;
+    private ProgressDialog pd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -225,6 +227,10 @@ public class VehicleInformation extends AppCompatActivity implements AdapterView
 
 
     private void getVehicleInfo() {
+        pd = new ProgressDialog(VehicleInformation.this);
+        pd.setCancelable(false);
+        pd.setMessage("Pleas Wait...");
+        pd.show();
         AsyncHttpClient client = new AsyncHttpClient();
         RequestParams googleparams = new RequestParams();
         googleparams.put("driver_id", Utils.ReadSharePrefrence(VehicleInformation.this, Constant.DRIVERID));
@@ -252,6 +258,8 @@ public class VehicleInformation extends AppCompatActivity implements AdapterView
                     txt_vecle_name.setText((dmodel.getData().getMake())+" "+(dmodel.getData().getModel()));
                     txt_selected_vecle_type.setText(dmodel.getData().getVehicle_type());
                     txt_registered_num.setText(dmodel.getData().getLicense_plate());
+                    Utils.WriteSharePrefrence(VehicleInformation.this,Constant.PlateNumber,dmodel.getData().getLicense_plate());
+                    String platenumber = Utils.ReadSharePrefrence(VehicleInformation.this,Constant.PlateNumber);
                     txt_edit_vehicle_color.setText(dmodel.getData().getVehicle_color());
                     Utils.WriteSharePrefrence(VehicleInformation.this,Constant.Driver_Trip_Id,dmodel.getData().getId());
                     String driver_Tid = Utils.ReadSharePrefrence(VehicleInformation.this,Constant.Driver_Trip_Id);
@@ -261,6 +269,7 @@ public class VehicleInformation extends AppCompatActivity implements AdapterView
                         Picasso.with(VehicleInformation.this).load(dmodel.getData().getImage()).placeholder(R.drawable.carprofile).into(img_carPorifile);
 
                     }
+                    pd.dismiss();
 
                 }else {
                     linear_info.setVisibility(View.GONE);

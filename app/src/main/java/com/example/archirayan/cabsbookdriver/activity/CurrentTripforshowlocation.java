@@ -1,7 +1,6 @@
 package com.example.archirayan.cabsbookdriver.activity;
 
 import android.Manifest;
-import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -16,7 +15,6 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
-import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -28,7 +26,6 @@ import com.directions.route.RouteException;
 import com.directions.route.Routing;
 import com.directions.route.RoutingListener;
 import com.example.archirayan.cabsbookdriver.R;
-import com.example.archirayan.cabsbookdriver.StarttoPickupPointActivity;
 import com.example.archirayan.cabsbookdriver.Utils.Utils;
 import com.example.archirayan.cabsbookdriver.model.Constant;
 import com.google.android.gms.common.ConnectionResult;
