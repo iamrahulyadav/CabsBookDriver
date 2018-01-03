@@ -19,6 +19,7 @@ import com.example.archirayan.cabsbookdriver.activity.driverhelp.DriverAccountHe
 import com.example.archirayan.cabsbookdriver.model.Constant;
 import com.example.archirayan.cabsbookdriver.model.DriverLoginResponse;
 import com.example.archirayan.cabsbookdriver.model.EarningsBalanceResponse;
+import com.example.archirayan.cabsbookdriver.model.GetVehicleInformationResponse;
 import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -28,6 +29,7 @@ import com.squareup.picasso.Picasso;
 import org.json.JSONObject;
 
 import cz.msebera.android.httpclient.Header;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class DriverMainPage extends AppCompatActivity
 {
@@ -37,12 +39,12 @@ public class DriverMainPage extends AppCompatActivity
     private ImageView img_home, img_earnings, img_rating, img_account, img_profile;
     private TextView txt_earnings, txt_home, txt_rating, txt_account, txt_signout, txt_person_name, txt_money, txt_trip_num, txt_balance_num;
     private Button btn_goonline, btn_online, btn_notify;
+    private CircleImageView img_vihical;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_main_page);
-
 
         linear_about = (LinearLayout) findViewById(R.id.linear_about);
 
@@ -71,6 +73,7 @@ public class DriverMainPage extends AppCompatActivity
         linear_waybill = (LinearLayout) findViewById(R.id.linear_waybill);
         linear_setting = (LinearLayout) findViewById(R.id.linear_setting);
 
+        img_vihical = (CircleImageView) findViewById(R.id.img_vihical);
 
         linear_waybill.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +81,6 @@ public class DriverMainPage extends AppCompatActivity
                 startActivity(new Intent(DriverMainPage.this, WaybillActivity.class));
             }
         });
-
 
         linear_driverprofile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -299,8 +301,52 @@ public class DriverMainPage extends AppCompatActivity
 
         getUserDetails();
         getEnerings();
+        getVehicalDetails();
 
 
+    }
+
+    private void getVehicalDetails() {
+        AsyncHttpClient client = new AsyncHttpClient();
+        RequestParams googleparams = new RequestParams();
+        googleparams.put("driver_id", Utils.ReadSharePrefrence(DriverMainPage.this, Constant.DRIVERID));
+
+        Log.e(TAG, "USERURL:" + Constant.BASE_URL + "get_driver_texi.php?" + googleparams);
+        Log.e(TAG, googleparams.toString());
+        client.post(this, Constant.BASE_URL + "get_driver_texi.php?", googleparams, new JsonHttpResponseHandler() {
+            @Override
+            public void onStart() {
+                super.onStart();
+            }
+
+            @Override
+            public void onFinish() {
+
+                super.onFinish();
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response)
+            {
+                super.onSuccess(statusCode, headers, response);
+                Log.e(TAG, "Driver RESPONSE-" + response);
+                GetVehicleInformationResponse dmodel = new Gson().fromJson(new String(String.valueOf(response)), GetVehicleInformationResponse.class);
+                if (dmodel.getStatus().equalsIgnoreCase("true")) {
+                    if (dmodel.getData().getImage().isEmpty()) {
+                        Picasso.with(DriverMainPage.this).load(R.drawable.carprofile);
+                    } else {
+                        Picasso.with(DriverMainPage.this).load(dmodel.getData().getImage()).placeholder(R.drawable.carprofile).into(img_vihical);
+
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                super.onFailure(statusCode, headers, responseString, throwable);
+                Log.e(TAG, throwable.getMessage());
+            }
+        });
     }
 
 

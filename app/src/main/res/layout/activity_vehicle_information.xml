@@ -40,6 +40,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/txt_no_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
@@ -56,6 +57,7 @@
         android:scrollbars="none">
 
         <LinearLayout
+            android:id="@+id/linear_info"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -86,7 +88,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_15sdp"
                     android:layout_marginTop="@dimen/_15sdp"
-                    android:text="Your Vehicle Name"
+                    android:text="Your Vehicle Name:"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_15sdp" />
 
@@ -198,7 +200,7 @@
                         android:textSize="@dimen/_15sdp" />
 
                     <TextView
-                        android:id="@+id/txt_edit_phone"
+                        android:id="@+id/txt_registered_num"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_10sdp"
@@ -207,22 +209,6 @@
                         android:textSize="@dimen/_15sdp" />
                 </LinearLayout>
 
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:id="@+id/img_edit_phone"
-                        android:layout_width="@dimen/_20sdp"
-                        android:layout_height="@dimen/_20sdp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginTop="@dimen/_30sdp"
-                        android:src="@drawable/ic_action_next" />
-                </RelativeLayout>
             </LinearLayout>
 
             <View
@@ -262,28 +248,7 @@
                         android:layout_marginTop="@dimen/_10sdp"
                         android:textSize="@dimen/_15sdp" />
                 </LinearLayout>
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:id="@+id/img_edit_color"
-                        android:layout_width="@dimen/_20sdp"
-                        android:layout_height="@dimen/_20sdp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginTop="@dimen/_30sdp"
-                        android:src="@drawable/ic_action_next" />
-                </RelativeLayout>
             </LinearLayout>
-
-
         </LinearLayout>
     </ScrollView>
-
-
 </LinearLayout>
