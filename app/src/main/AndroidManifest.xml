@@ -139,7 +139,9 @@
         <activity android:name=".activity.StarComplimentsServices" />
         <activity android:name=".activity.ExpertNavigationComliment" />
         <activity android:name=".activity.GreatAmenitiesCompliment" />
-        <activity android:name=".activity.GreatConversationCompliments"></activity>
+        <activity android:name=".activity.GreatConversationCompliments" />
+        <activity android:name=".activity.GreatAttitudeCompliment" />
+        <activity android:name=".activity.NeatandCleanCompliment"></activity>
     </application>
 
 </manifest>

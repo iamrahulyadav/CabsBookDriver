@@ -13,6 +13,10 @@ import android.widget.LinearLayout;
 
 import com.example.archirayan.cabsbookdriver.R;
 import com.example.archirayan.cabsbookdriver.activity.ExpertNavigationComliment;
+import com.example.archirayan.cabsbookdriver.activity.GreatAmenitiesCompliment;
+import com.example.archirayan.cabsbookdriver.activity.GreatAttitudeCompliment;
+import com.example.archirayan.cabsbookdriver.activity.GreatConversationCompliments;
+import com.example.archirayan.cabsbookdriver.activity.NeatandCleanCompliment;
 import com.example.archirayan.cabsbookdriver.activity.StarComplimentsServices;
 
 
@@ -58,34 +62,34 @@ public class BadgesFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), ExpertNavigationComliment.class));
-
             }
         });
 
         linear_great_amenities.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(getActivity(), GreatAmenitiesCompliment.class));
             }
         });
 
         linear_great_attitude.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(getActivity(), GreatAttitudeCompliment.class));
             }
         });
 
         linear_greate_conver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(getActivity(), GreatConversationCompliments.class));
             }
         });
 
         linear_clean.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(getActivity(), NeatandCleanCompliment.class));
 
             }
         });
