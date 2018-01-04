@@ -124,26 +124,22 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".activity.CurrentTripforshowlocation"
-            android:label="@string/title_activity_maps" />
+        <activity android:name=".activity.CurrentTripforshowlocation" />
         <activity android:name=".activity.UserContectActivity" />
-        <activity
-            android:name=".activity.StarttoPickupPointActivity"
-            android:label="@string/title_activity_startto_pickup_point" />
-        <activity android:name=".activity.driverhelp.DriverAccountHelpActivity"></activity>
-        <activity
-            android:name=".activity.PickuoPointToDropoffPoint"
-            android:label="@string/title_activity_pickuo_point_to_dropoff_point"></activity>
-        <activity android:name=".activity.DriverProfileSetCountryActivity"></activity>
-        <activity android:name=".activity.DriverProfileRecommandedCityActivity"></activity>
-        <activity android:name=".activity.DriverProfileFunfactActivity"></activity>
-        <activity android:name=".activity.DriverProfileSetYourselfActivity"></activity>
-        <activity android:name=".activity.DriverProfileSetFavouritStory"></activity>
-        <activity android:name=".activity.driverhelp.DriverAccountHelpGuidDrivingCabs1Activity"></activity>
-        <activity android:name=".activity.driverhelp.DriverAccountHelpGuideDrivingCabsActivity"></activity>
-        
-
+        <activity android:name=".activity.StarttoPickupPointActivity" />
+        <activity android:name=".activity.driverhelp.DriverAccountHelpActivity" />
+        <activity android:name=".activity.PickuoPointToDropoffPoint" />
+        <activity android:name=".activity.DriverProfileSetCountryActivity" />
+        <activity android:name=".activity.DriverProfileRecommandedCityActivity" />
+        <activity android:name=".activity.DriverProfileFunfactActivity" />
+        <activity android:name=".activity.DriverProfileSetYourselfActivity" />
+        <activity android:name=".activity.DriverProfileSetFavouritStory" />
+        <activity android:name=".activity.driverhelp.DriverAccountHelpGuidDrivingCabs1Activity" />
+        <activity android:name=".activity.driverhelp.DriverAccountHelpGuideDrivingCabsActivity" />
+        <activity android:name=".activity.StarComplimentsServices" />
+        <activity android:name=".activity.ExpertNavigationComliment" />
+        <activity android:name=".activity.GreatAmenitiesCompliment" />
+        <activity android:name=".activity.GreatConversationCompliments"></activity>
     </application>
 
 </manifest>
