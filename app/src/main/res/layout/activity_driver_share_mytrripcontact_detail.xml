@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_white"
     android:orientation="vertical"
     tools:context="com.example.archirayan.cabsbookdriver.activity.DriverShareMytrripcontactDetail">
 
@@ -48,22 +49,27 @@
             android:textColor="@color/black"
             android:textSize="@dimen/_20sdp" />
 
+
         <RadioGroup
+            android:id="@+id/radioGroup1"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_100sdp"
             android:layout_marginTop="@dimen/_20sdp">
 
             <RadioButton
+                android:id="@+id/radio_addressbook"
                 android:layout_width="match_parent"
+                android:background="@color/white"
                 android:layout_height="@dimen/_45sdp"
-                android:padding="@dimen/_10sdp"
                 android:text="From my address book"
                 android:textSize="@dimen/_15sdp" />
 
             <RadioButton
+                android:id="@+id/radio_anothrapp"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_45sdp"
-                android:padding="@dimen/_10sdp"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/_3sdp"
                 android:text="From another app"
                 android:textSize="@dimen/_15sdp" />
         </RadioGroup>
@@ -75,12 +81,14 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/btn_selectcontacts"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_40sdp"
                 android:background="@drawable/btn_blue_corner"
                 android:text="Select Contacts"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_14sdp" />
+                android:textSize="@dimen/_14sdp"
+                android:visibility="gone" />
 
             <TextView
                 android:layout_width="match_parent"

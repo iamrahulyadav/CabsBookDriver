@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.archirayan.cabsbookdriver.R;
 
 public class DriverShareMytrripSetupDetail extends AppCompatActivity {
 
@@ -22,7 +21,8 @@ public class DriverShareMytrripSetupDetail extends AppCompatActivity {
     private TextView[] dots1;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_share_mytrrip_setup_detail);
         viewPager = (ViewPager) findViewById(R.id.viewPager);
@@ -37,7 +37,6 @@ public class DriverShareMytrripSetupDetail extends AppCompatActivity {
         {
             dots[i] = new ImageView(this);
             dots1[i] = new TextView(this);
-
             dots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.non_active_dot));
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             params.setMargins(8, 0, 8, 0);
@@ -46,7 +45,8 @@ public class DriverShareMytrripSetupDetail extends AppCompatActivity {
 
         dots[0].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.active_dot));
 
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener()
+        {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
