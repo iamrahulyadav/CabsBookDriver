@@ -142,6 +142,10 @@
         <activity android:name=".activity.GreatConversationCompliments" />
         <activity android:name=".activity.GreatAttitudeCompliment" />
         <activity android:name=".activity.NeatandCleanCompliment"></activity>
+        <activity android:name=".activity.DriverRatingProtipsActivity"></activity>
+        <activity android:name=".activity.DriverShareMytrripcontactDetail"></activity>
+        <activity android:name=".activity.DriverShareMytrripSetupDetail"></activity>
+        <activity android:name=".activity.DriverRatingProtipsDetailActivity"></activity>
     </application>
 
 </manifest>

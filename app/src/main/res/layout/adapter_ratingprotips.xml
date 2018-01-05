@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/setting_Account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_3sdp"
+        app:cardElevation="@dimen/_5sdp"
+        card_view:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/main_llayoutprotips"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_deals"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            android:src="@drawable/ic_ratings" />
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Hello"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Description"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Continue reading"
+            android:textColor="@color/theme_primary"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textSize="@dimen/_15sdp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/_10sdp"
+
+            android:layout_height="@dimen/_40sdp">
+            <Button
+                android:layout_width="@dimen/_100sdp"
+                android:background="@drawable/btn_ratingprotips"
+                android:padding="@dimen/_10sdp"
+
+                android:text="Effiecency"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_13sdp"
+                android:layout_height="@dimen/_35sdp" />
+
+            <Button
+                android:layout_width="@dimen/_120sdp"
+                android:background="@drawable/btn_ratingprotips"
+                android:padding="@dimen/_10sdp"
+                android:text="Professionalism"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_13sdp"
+                android:layout_height="@dimen/_35sdp" />
+        </LinearLayout>
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -254,6 +254,7 @@ public class VehicleInformation extends AppCompatActivity implements AdapterView
                 super.onSuccess(statusCode, headers, response);
                 Log.e(TAG, "Driver RESPONSE-" + response);
                 GetVehicleInformationResponse dmodel = new Gson().fromJson(new String(String.valueOf(response)), GetVehicleInformationResponse.class);
+                pd.dismiss();
                 if (dmodel.getStatus().equalsIgnoreCase("true")) {
                     txt_vecle_name.setText((dmodel.getData().getMake())+" "+(dmodel.getData().getModel()));
                     txt_selected_vecle_type.setText(dmodel.getData().getVehicle_type());
@@ -269,7 +270,7 @@ public class VehicleInformation extends AppCompatActivity implements AdapterView
                         Picasso.with(VehicleInformation.this).load(dmodel.getData().getImage()).placeholder(R.drawable.carprofile).into(img_carPorifile);
 
                     }
-                    pd.dismiss();
+
 
                 }else {
                     linear_info.setVisibility(View.GONE);
