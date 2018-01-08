@@ -55,9 +55,7 @@ public class DriverprofileLanguageAdapter extends RecyclerView.Adapter<Driverpro
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
     {
-        View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.adapter_languagelist, parent, false);
-
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_languagelist, parent, false);
         return new MyViewHolder(itemView);
     }
 

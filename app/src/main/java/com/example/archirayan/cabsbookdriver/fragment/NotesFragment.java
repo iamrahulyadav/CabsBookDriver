@@ -3,6 +3,7 @@ package com.example.archirayan.cabsbookdriver.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import com.example.archirayan.cabsbookdriver.R;
 public class NotesFragment extends Fragment {
 
     private LinearLayout linear_no_comments;
+    private RecyclerView recycler_view_notes;
 
 
     public NotesFragment() {
@@ -32,6 +34,8 @@ public class NotesFragment extends Fragment {
 
         linear_no_comments = (LinearLayout) v.findViewById(R.id.linear_no_comments);
         linear_no_comments.setVisibility(View.VISIBLE);
+
+        recycler_view_notes = (RecyclerView) v.findViewById(R.id.recycler_view_notes);
         return v;
     }
 

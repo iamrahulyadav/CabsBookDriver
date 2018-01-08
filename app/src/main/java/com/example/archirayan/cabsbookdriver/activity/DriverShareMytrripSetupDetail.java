@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.archirayan.cabsbookdriver.R;
+
 
 public class DriverShareMytrripSetupDetail extends AppCompatActivity {
 
@@ -21,8 +23,8 @@ public class DriverShareMytrripSetupDetail extends AppCompatActivity {
     private TextView[] dots1;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState){
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_share_mytrrip_setup_detail);
         viewPager = (ViewPager) findViewById(R.id.viewPager);
