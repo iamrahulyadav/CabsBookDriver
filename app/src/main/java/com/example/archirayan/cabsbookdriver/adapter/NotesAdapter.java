@@ -9,6 +9,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.archirayan.cabsbookdriver.R;
+import com.example.archirayan.cabsbookdriver.model.FiveStarComents;
+
+import java.util.ArrayList;
 
 /**
  * Created by archirayan on 8/1/18.
@@ -17,7 +20,12 @@ import com.example.archirayan.cabsbookdriver.R;
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder>{
 
     private Context context;
+    private ArrayList<FiveStarComents> fiveStarComents;
 
+    public NotesAdapter(Context context, ArrayList<FiveStarComents> fiveStarComents) {
+        this.context = context;
+        this.fiveStarComents = fiveStarComents;
+    }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -28,13 +36,14 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(NotesAdapter.ViewHolder holder, int position) {
+        holder.txt_notes_type.setText(fiveStarComents.get(position).getFiver_star_comment());
 
     }
 
 
     @Override
     public int getItemCount() {
-        return 0;
+        return fiveStarComents.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
