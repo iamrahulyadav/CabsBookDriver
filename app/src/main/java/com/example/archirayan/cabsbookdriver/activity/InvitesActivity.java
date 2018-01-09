@@ -78,7 +78,6 @@ public class InvitesActivity extends AppCompatActivity {
                 GetInvitecodeResponse dmodel = new Gson().fromJson(new String(String.valueOf(response)),GetInvitecodeResponse.class);
                 if (dmodel.getStatus().equalsIgnoreCase("true")) {
                     txt_invitecode.setText(dmodel.getData().getInvite_code());
-
                 }
             }
             @Override

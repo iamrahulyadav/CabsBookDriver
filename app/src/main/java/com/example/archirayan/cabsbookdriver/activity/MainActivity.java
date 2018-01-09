@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         linear_userapp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Intent shareIntent = new Intent(Intent.ACTION_SEND);
+               /* Intent shareIntent = new Intent(Intent.ACTION_SEND);
                 shareIntent.setType("text/plain");
                 Intent chooserIntent = Intent.createChooser(shareIntent, "Share image via...");
                 String link = "https://play.google.com/store/apps/details?id=com.picciti.archi1.piccity&hl=en";

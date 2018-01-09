@@ -64,7 +64,7 @@ public class DriverMainPage extends AppCompatActivity implements LocationListene
 {
     private static final String TAG = "DriverMainPage";
     public LinearLayout linear_setting, linear_about, linear_doc, linear_help;
-    private LinearLayout line2, linear_home, linear_earnings, linear_rating, linear_account, line1, linear_activity_account, linear_profilcontent, linear_activity_home, linear_activity_earning, linear_activity_rating, linear_earningweek, linear_starrating, linear_acceptancerate, linear_cancelling, linear_compliments, linear_invites, linear_find_trip, linear_vihical, linear_driverprofile, linear_waybill,linear_protips,linear_feedback;
+    private LinearLayout line2, linear_home, linear_earnings, linear_rating, linear_account, line1, linear_activity_account, linear_profilcontent, linear_activity_home, linear_activity_earning, linear_activity_rating, linear_earningweek, linear_starrating, linear_acceptancerate, linear_cancelling, linear_compliments, linear_invites, linear_find_trip, linear_vihical, linear_driverprofile, linear_waybill,linear_protips,linear_feedback,linear_promotions;
     private ImageView img_home, img_earnings, img_rating, img_account, img_profile;
     private TextView txt_earnings, txt_home, txt_rating, txt_account, txt_signout, txt_person_name, txt_money, txt_trip_num, txt_balance_num;
     private Button btn_goonline, btn_online, btn_notify;
@@ -115,6 +115,7 @@ public class DriverMainPage extends AppCompatActivity implements LocationListene
         linear_setting = (LinearLayout) findViewById(R.id.linear_setting);
         linear_protips = (LinearLayout) findViewById(R.id.linear_protips);
         linear_feedback = (LinearLayout) findViewById(R.id.linear_feedback);
+        linear_promotions = (LinearLayout) findViewById(R.id.linear_promotions);
 
         recycler_view_notify = (RecyclerView) findViewById(R.id.recycler_view_notify);
         recycler_view_notify.setHasFixedSize(true);
@@ -122,6 +123,13 @@ public class DriverMainPage extends AppCompatActivity implements LocationListene
         recycler_view_notify.setLayoutManager(layoutManager);
         noticeAdepter = new NoticeAdepter(DriverMainPage.this,noticeItems);
         recycler_view_notify.setAdapter(noticeAdepter);
+
+        linear_promotions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DriverMainPage.this,PromotionsActivity.class));
+            }
+        });
 
         linear_feedback.setOnClickListener(new View.OnClickListener() {
             @Override

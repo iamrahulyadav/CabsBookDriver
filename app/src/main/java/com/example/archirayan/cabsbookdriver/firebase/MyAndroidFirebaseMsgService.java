@@ -15,6 +15,7 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.example.archirayan.cabsbookdriver.R;
+import com.example.archirayan.cabsbookdriver.activity.CurrentTrips;
 import com.example.archirayan.cabsbookdriver.activity.DriverMainPage;
 import com.example.archirayan.cabsbookdriver.model.Constant;
 import com.example.archirayan.cabsbookdriver.Utils.Utils;
@@ -157,7 +158,7 @@ public class MyAndroidFirebaseMsgService extends FirebaseMessagingService {
 
     private void sendNotification(String messageBody) {
 
-        Intent intent = new Intent(this, DriverMainPage.class);
+        Intent intent = new Intent(this, CurrentTrips.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         Intent intentConfirm = new Intent(this, DriverMainPage.class);
         intentConfirm.setAction("CONFIRM");

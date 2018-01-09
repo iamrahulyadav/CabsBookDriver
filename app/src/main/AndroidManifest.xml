@@ -146,9 +146,10 @@
         <activity android:name=".activity.DriverShareMytrripcontactDetail" />
         <activity android:name=".activity.DriverShareMytrripSetupDetail" />
         <activity android:name=".activity.DriverRatingProtipsDetailActivity" />
-        <activity android:name=".activity.RiderFeedback"></activity>
-        <activity android:name=".activity.DriverShareMytripgetAllContacts"></activity>
-        <activity android:name=".activity.DriverShareMytripMain"></activity>
+        <activity android:name=".activity.RiderFeedback" />
+        <activity android:name=".activity.DriverShareMytripgetAllContacts" />
+        <activity android:name=".activity.DriverShareMytripMain" />
+        <activity android:name=".activity.PromotionsActivity"></activity>
     </application>
 
 </manifest>
