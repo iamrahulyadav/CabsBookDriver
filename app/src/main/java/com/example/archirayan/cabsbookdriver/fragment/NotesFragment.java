@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.example.archirayan.cabsbookdriver.R;
+import com.example.archirayan.cabsbookdriver.adapter.NotesAdapter;
 
 
 /**
@@ -19,6 +20,7 @@ public class NotesFragment extends Fragment {
 
     private LinearLayout linear_no_comments;
     private RecyclerView recycler_view_notes;
+    private NotesAdapter notesAdapter;
 
 
     public NotesFragment() {

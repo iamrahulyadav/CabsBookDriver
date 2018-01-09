@@ -1,8 +1,11 @@
 package com.example.archirayan.cabsbookdriver.activity;
 
 import android.app.LoaderManager;
+import android.app.ProgressDialog;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -17,6 +20,7 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -29,75 +33,94 @@ import com.example.archirayan.cabsbookdriver.model.ContactListItem;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.archirayan.cabsbookdriver.adapter.AllContactsAdapter.mFilteredList;
+import static com.example.archirayan.cabsbookdriver.adapter.AllSelectContactsAdapter.strCreditId;
+
 
 public class DriverShareMytripgetAllContacts extends AppCompatActivity implements
-        LoaderManager.LoaderCallbacks<Cursor>
-{
+        LoaderManager.LoaderCallbacks<Cursor> {
 
     public static final int
             MY_PERMISSIONS_REQUEST_READ_CONTACTS = 99;
     public EditText search;
-    RecyclerView rvContacts;
     public ImageView img_back_acceptance_tital;
+    public Button btn_next;
+    public Context context = this;
+    RecyclerView rvContacts;
     database myDB;
     Boolean permission = false;
     int exist;
-
     List<ContactListItem> contactList;
-
     ContactListItem contactListItem;
     ArrayList<ContactListItem> searchedArraylist;
+    AllContactsAdapter contactAdapter;
+    ProgressDialog pd;
     private String mOrderBy =
             ContactsContract.Contacts.DISPLAY_NAME_PRIMARY;
-    AllContactsAdapter contactAdapter;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_share_mytripget_all_contacts);
-        img_back_acceptance_tital=findViewById(R.id.img_back_acceptance_tital);
+        img_back_acceptance_tital = findViewById(R.id.img_back_acceptance_tital);
+
+
+        btn_next = findViewById(R.id.btn_next);
         search = (EditText) findViewById(R.id.search);
         myDB = new database(this);
         exist = myDB.tableExists();
         rvContacts = (RecyclerView)
                 findViewById(R.id.rvContacts);
         if (Build.VERSION.SDK_INT >=
-                Build.VERSION_CODES.M)
-        {
+                Build.VERSION_CODES.M) {
             permission = checkContactsPermission();
-            if (permission)
-            {
-                if (exist == 0)
-                {
+            if (permission) {
+                if (exist == 0) {
                     getLoaderManager().initLoader(1, null, this);
                     displayAllContacts();
                 }
             }
-        }
-        else
-        {
-            if (exist == 0)
-            {
+        } else {
+            if (exist == 0) {
                 getLoaderManager().initLoader(1, null, this);
                 displayAllContacts();
             }
         }
         displayAllContacts();
 
-        img_back_acceptance_tital.setOnClickListener(new View.OnClickListener()
-        {
+        img_back_acceptance_tital.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 onBackPressed();
             }
         });
+
+        if (strCreditId.size() > 0)
+        {
+            for (int i = 0; i < strCreditId.size(); i++)
+            {
+                search.setText(strCreditId.get(i).getContactName());
+            }
+        } else {
+
+        }
+
+
+        btn_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DriverShareMytripgetAllContacts.this, DriverShareMytripMain.class));
+            }
+        });
+
+
     }
 
 
-    private void displayAllContacts()
-    {
+    private void displayAllContacts() {
+        pd = new ProgressDialog(context);
+        pd.setMessage("Loading...");
+        pd.setCancelable(true);
+        pd.show();
         contactList = new ArrayList();
         Cursor c = myDB.getAllData();
         if (c != null && c.getCount() > 0) {
@@ -112,53 +135,44 @@ public class DriverShareMytripgetAllContacts extends AppCompatActivity implement
         }
 
         if (contactList.size() > 0) {
-             contactAdapter = new
+            pd.dismiss();
+            contactAdapter = new
                     AllContactsAdapter(contactList, getApplicationContext());
             rvContacts.setLayoutManager(new LinearLayoutManager(this));
             rvContacts.setAdapter(contactAdapter);
             initViews();
         } else {
+            pd.dismiss();
             Toast.makeText(DriverShareMytripgetAllContacts.this, R.string.no_result_found, Toast.LENGTH_SHORT).show();
         }
     }
 
 
-    private void initViews()
-    {
-        search.addTextChangedListener(new TextWatcher()
-        {
+    private void initViews() {
+        search.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after)
-            {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
             }
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count)
-            {
-                if (contactList.size() > 0)
-                {
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (contactList.size() > 0) {
                     String searchFor = search.getText().toString();
                     searchedArraylist = new ArrayList<>();
                     for (int j = 0; j < contactList.size(); j++) {
-
-                      //  if (contactList.get(j).getContactName().toString().contains(searchFor.toLowerCase()) || contactList.get(j).getContactNumber().contains(searchFor.toLowerCase()))
-                        if(contactList.get(j).getContactName().toLowerCase().contains(searchFor.toLowerCase()) || contactList.get(j).getContactNumber().toLowerCase().contains(searchFor.toLowerCase()))
-                        {
+                        if (contactList.get(j).getContactName().toLowerCase().contains(searchFor.toLowerCase()) || contactList.get(j).getContactNumber().toLowerCase().contains(searchFor.toLowerCase())) {
                             searchedArraylist.add(contactList.get(j));
                         }
                     }
 
-                    if (searchedArraylist.size() > 0)
-                    {
+                    if (searchedArraylist.size() > 0) {
                         AllContactsAdapter contactAdapter = new
                                 AllContactsAdapter(searchedArraylist, getApplicationContext());
                         rvContacts.setLayoutManager(new LinearLayoutManager(DriverShareMytripgetAllContacts.this));
                         rvContacts.setAdapter(contactAdapter);
                         contactAdapter.notifyDataSetChanged();
-                    }
-                    else
-                    {
+                    } else {
                         Toast.makeText(DriverShareMytripgetAllContacts.this, R.string.no_result_found, Toast.LENGTH_SHORT).show();
                     }
                 } else {
@@ -187,6 +201,7 @@ public class DriverShareMytripgetAllContacts extends AppCompatActivity implement
         }
         return null;
     }
+
 
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
