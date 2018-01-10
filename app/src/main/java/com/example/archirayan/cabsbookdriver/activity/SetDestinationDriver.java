@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -22,6 +23,7 @@ public class SetDestinationDriver extends AppCompatActivity {
     private PlacesAutocompleteTextView place_detination_of_driver;
     private String str;
     private ImageView img_back_setdriverdetination;
+    private RecyclerView recycler_view_list_detinations;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,8 @@ public class SetDestinationDriver extends AppCompatActivity {
         setContentView(R.layout.activity_set_destination_driver);
 
         place_detination_of_driver = (PlacesAutocompleteTextView) findViewById(R.id.place_detination_of_driver);
+
+        recycler_view_list_detinations = (RecyclerView) findViewById(R.id.recycler_view_list_detinations);
 
 
         place_detination_of_driver.setOnPlaceSelectedListener(new OnPlaceSelectedListener() {

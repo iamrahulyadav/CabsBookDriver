@@ -94,6 +94,13 @@ public class CurrentTrips extends AppCompatActivity {
         });
         btn_set_detination = (Button) findViewById(R.id.btn_set_detination);
 
+        btn_set_detination.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CurrentTrips.this,SetDestinationDriver.class));
+            }
+        });
+
         btn_confrim = (Button) findViewById(R.id.btn_confrim);
         btn_cancle = (Button) findViewById(R.id.btn_cancle);
         btn_confrim.setOnClickListener(new View.OnClickListener() {

@@ -150,6 +150,8 @@
         <activity android:name=".activity.DriverShareMytripgetAllContacts" />
         <activity android:name=".activity.DriverShareMytripMain" />
         <activity android:name=".activity.PromotionsActivity"></activity>
+        <activity android:name=".activity.InvitefreindscontactsActivity"></activity>
+        <activity android:name=".activity.InvitefreindssharecontactsActivity"></activity>
     </application>
 
 </manifest>

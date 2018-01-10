@@ -27,6 +27,7 @@ import com.example.archirayan.cabsbookdriver.Utils.Utils;
 import com.example.archirayan.cabsbookdriver.activity.driverhelp.DriverAccountHelpActivity;
 import com.example.archirayan.cabsbookdriver.model.Constant;
 import com.example.archirayan.cabsbookdriver.model.DriverLoginResponse;
+import com.example.archirayan.cabsbookdriver.model.DriverRatingandmonthsResonse;
 import com.example.archirayan.cabsbookdriver.model.EarningsBalanceResponse;
 import com.example.archirayan.cabsbookdriver.model.GetVehicleInformationResponse;
 import com.google.android.gms.common.ConnectionResult;
@@ -63,7 +64,7 @@ public class DriverMainPage extends AppCompatActivity implements LocationListene
     public LinearLayout linear_setting, linear_about, linear_doc, linear_help,linear_invite_friend;
     private LinearLayout line2, linear_home, linear_earnings, linear_rating, linear_account, line1, linear_activity_account, linear_profilcontent, linear_activity_home, linear_activity_earning, linear_activity_rating, linear_earningweek, linear_starrating, linear_acceptancerate, linear_cancelling, linear_compliments, linear_invites, linear_find_trip, linear_vihical, linear_driverprofile, linear_waybill,linear_protips,linear_feedback,linear_promotions;
     private ImageView img_home, img_earnings, img_rating, img_account, img_profile;
-    private TextView txt_earnings, txt_home, txt_rating, txt_account, txt_signout, txt_person_name, txt_money, txt_trip_num, txt_balance_num;
+    private TextView txt_earnings, txt_home, txt_rating, txt_account, txt_signout, txt_person_name, txt_money, txt_trip_num, txt_balance_num,txt_zero,txt_starrating;
     private Button btn_goonline, btn_online, btn_notify;
     private CircleImageView img_vihical;
     private MapView mapView;
@@ -294,6 +295,9 @@ public class DriverMainPage extends AppCompatActivity implements LocationListene
         txt_money = (TextView) findViewById(R.id.txt_money);
         txt_trip_num = (TextView) findViewById(R.id.txt_trip_num);
         txt_balance_num = (TextView) findViewById(R.id.txt_balance_num);
+        txt_zero = (TextView) findViewById(R.id.txt_zero);
+        txt_starrating = (TextView) findViewById(R.id.txt_starrating);
+
         img_profile = (ImageView) findViewById(R.id.img_profile);
 
         linear_account.setOnClickListener(new View.OnClickListener() {
@@ -419,8 +423,48 @@ public class DriverMainPage extends AppCompatActivity implements LocationListene
         getUserDetails();
         getEnerings();
         getVehicalDetails();
+        getRatings();
 
 
+    }
+
+    private void getRatings() {
+        AsyncHttpClient client = new AsyncHttpClient();
+        RequestParams googleparams = new RequestParams();
+        googleparams.put("driver_id", Utils.ReadSharePrefrence(DriverMainPage.this, Constant.DRIVERID));
+
+        Log.e(TAG, "USERURL:" + Constant.BASE_URL + "get_star_rate.php?" + googleparams);
+        Log.e(TAG, googleparams.toString());
+        client.post(this, Constant.BASE_URL + "get_star_rate.php?", googleparams, new JsonHttpResponseHandler() {
+            @Override
+            public void onStart() {
+                super.onStart();
+            }
+
+            @Override
+            public void onFinish() {
+
+                super.onFinish();
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response)
+            {
+                super.onSuccess(statusCode, headers, response);
+                Log.e(TAG, "Driver RESPONSE-" + response);
+                DriverRatingandmonthsResonse dmodel = new Gson().fromJson(new String(String.valueOf(response)), DriverRatingandmonthsResonse.class);
+                if (dmodel.getStatus().equalsIgnoreCase("true")) {
+                    txt_zero.setText(dmodel.getData().getStar_date());
+                    txt_starrating.setText(dmodel.getData().getStar_date());
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                super.onFailure(statusCode, headers, responseString, throwable);
+                Log.e(TAG, throwable.getMessage());
+            }
+        });
     }
 
     protected synchronized void buildGoogleApiClient() {
