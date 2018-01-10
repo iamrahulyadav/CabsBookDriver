@@ -41,8 +41,6 @@ public class CurrentTrips extends AppCompatActivity {
         setContentView(R.layout.activity_current_trips);
 
         txt_username = (TextView) findViewById(R.id.txt_username);
-        txt_source_of_trip = (TextView) findViewById(R.id.txt_source_of_trip);
-        txt_destination_of_trip = (TextView) findViewById(R.id.txt_destination_of_trip);
         txt_time_and_date = (TextView) findViewById(R.id.txt_time_and_date);
         txt_user_contect = (TextView) findViewById(R.id.txt_user_contect);
 

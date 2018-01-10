@@ -16,14 +16,22 @@ import android.widget.Toast;
 import com.example.archirayan.cabsbookdriver.R;
 import com.example.archirayan.cabsbookdriver.Utils.Utils;
 import com.example.archirayan.cabsbookdriver.model.Constant;
+import com.example.archirayan.cabsbookdriver.model.DriverLoginResponse;
+import com.example.archirayan.cabsbookdriver.model.DriverRatingandmonthsResonse;
+import com.google.gson.Gson;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import cz.msebera.android.httpclient.Header;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class DriverProfile extends AppCompatActivity implements View.OnClickListener {
+    private static final String TAG = "DriverProfile";
     public TextView txt_username;
     public CircleImageView img_userimage;
     public LinearLayout llayout_driverprofile_selectlanguage, llayout_driverprofile_recommandedcity, llayout_driverprofile_selectcountry2, llayout_driverprofile_addyourself, llayout_driverprofile_selectfavoritestory, llayout_driverprofile_selectfunfactmessage;
@@ -48,7 +56,6 @@ public class DriverProfile extends AppCompatActivity implements View.OnClickList
         Init();
         Click();
         txt_username.setText(str_Username);
-        txt_driver_rating.setText("4");
         if (Utils.isConnectingToInternet(DriverProfile.this)) {
             new getCountTripAndMonth().execute();
         } else {
@@ -111,6 +118,46 @@ public class DriverProfile extends AppCompatActivity implements View.OnClickList
             txt_city.setText(str_CityData);
             img_city.setImageResource(R.drawable.ic_edit_pencilweb);
         }
+
+        getDriverRatings();
+    }
+
+    private void getDriverRatings() {
+        AsyncHttpClient client = new AsyncHttpClient();
+        RequestParams googleparams = new RequestParams();
+        googleparams.put("driver_id", Utils.ReadSharePrefrence(DriverProfile.this, Constant.DRIVERID));
+
+        Log.e(TAG, "USERURL:" + Constant.BASE_URL + "get_star_rate.php?" + googleparams);
+        Log.e(TAG, googleparams.toString());
+        client.post(this, Constant.BASE_URL + "get_star_rate.php?", googleparams, new JsonHttpResponseHandler() {
+            @Override
+            public void onStart() {
+                super.onStart();
+            }
+
+            @Override
+            public void onFinish() {
+
+                super.onFinish();
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response)
+            {
+                super.onSuccess(statusCode, headers, response);
+                Log.e(TAG, "Driver RESPONSE-" + response);
+                DriverRatingandmonthsResonse dmodel = new Gson().fromJson(new String(String.valueOf(response)), DriverRatingandmonthsResonse.class);
+                if (dmodel.getStatus().equalsIgnoreCase("true")) {
+                    txt_driver_rating.setText(dmodel.getData().getStar_date());
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                super.onFailure(statusCode, headers, responseString, throwable);
+                Log.e(TAG, throwable.getMessage());
+            }
+        });
     }
 
     // // TODO: 28/12/17 Initailize the All Componant  (Memory Allocation)...

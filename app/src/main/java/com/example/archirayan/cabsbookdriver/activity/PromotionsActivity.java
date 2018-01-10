@@ -43,8 +43,5 @@ public class PromotionsActivity extends AppCompatActivity {
         recycler_view_promotions = (RecyclerView) findViewById(R.id.recycler_view_promotions);
         recycler_view_promotions.setAdapter(promotionsAdapter);
 
-
-
-
     }
 }

@@ -13,7 +13,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
@@ -26,12 +25,10 @@ import android.widget.Toast;
 import com.example.archirayan.cabsbookdriver.R;
 import com.example.archirayan.cabsbookdriver.Utils.Utils;
 import com.example.archirayan.cabsbookdriver.activity.driverhelp.DriverAccountHelpActivity;
-import com.example.archirayan.cabsbookdriver.adapter.NoticeAdepter;
 import com.example.archirayan.cabsbookdriver.model.Constant;
 import com.example.archirayan.cabsbookdriver.model.DriverLoginResponse;
 import com.example.archirayan.cabsbookdriver.model.EarningsBalanceResponse;
 import com.example.archirayan.cabsbookdriver.model.GetVehicleInformationResponse;
-import com.example.archirayan.cabsbookdriver.model.NoticeItem;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -60,16 +57,16 @@ import java.util.ArrayList;
 import cz.msebera.android.httpclient.Header;
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class DriverMainPage extends AppCompatActivity implements LocationListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener
-{
+public class DriverMainPage extends AppCompatActivity implements LocationListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+
     private static final String TAG = "DriverMainPage";
-    public LinearLayout linear_setting, linear_about, linear_doc, linear_help;
+    public LinearLayout linear_setting, linear_about, linear_doc, linear_help,linear_invite_friend;
     private LinearLayout line2, linear_home, linear_earnings, linear_rating, linear_account, line1, linear_activity_account, linear_profilcontent, linear_activity_home, linear_activity_earning, linear_activity_rating, linear_earningweek, linear_starrating, linear_acceptancerate, linear_cancelling, linear_compliments, linear_invites, linear_find_trip, linear_vihical, linear_driverprofile, linear_waybill,linear_protips,linear_feedback,linear_promotions;
     private ImageView img_home, img_earnings, img_rating, img_account, img_profile;
     private TextView txt_earnings, txt_home, txt_rating, txt_account, txt_signout, txt_person_name, txt_money, txt_trip_num, txt_balance_num;
     private Button btn_goonline, btn_online, btn_notify;
     private CircleImageView img_vihical;
-    MapView mapView;
+    private MapView mapView;
     private GoogleMap googleMap;
     private Location mlocation;
     double latitued;
@@ -79,8 +76,6 @@ public class DriverMainPage extends AppCompatActivity implements LocationListene
     private GoogleApiClient mGoogleApiClient;
     private LocationRequest mLocationRequest;
     private RecyclerView recycler_view_notify;
-    private NoticeAdepter noticeAdepter;
-    private ArrayList<NoticeItem> noticeItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,13 +111,14 @@ public class DriverMainPage extends AppCompatActivity implements LocationListene
         linear_protips = (LinearLayout) findViewById(R.id.linear_protips);
         linear_feedback = (LinearLayout) findViewById(R.id.linear_feedback);
         linear_promotions = (LinearLayout) findViewById(R.id.linear_promotions);
+        linear_invite_friend = (LinearLayout) findViewById(R.id.linear_invite_friend);
 
-        recycler_view_notify = (RecyclerView) findViewById(R.id.recycler_view_notify);
-        recycler_view_notify.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(DriverMainPage.this);
-        recycler_view_notify.setLayoutManager(layoutManager);
-        noticeAdepter = new NoticeAdepter(DriverMainPage.this,noticeItems);
-        recycler_view_notify.setAdapter(noticeAdepter);
+        linear_invite_friend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DriverMainPage.this,InvitesActivity.class));
+            }
+        });
 
         linear_promotions.setOnClickListener(new View.OnClickListener() {
             @Override
