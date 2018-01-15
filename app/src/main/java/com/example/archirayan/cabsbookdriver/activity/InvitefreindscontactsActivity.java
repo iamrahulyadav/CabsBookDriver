@@ -45,7 +45,6 @@ public class InvitefreindscontactsActivity extends AppCompatActivity implements 
         llayout_copyinvitecode.setOnClickListener(this);
         btn_contact.setOnClickListener(this);
         getInvitecode();
-
     }
 
     @Override
@@ -59,7 +58,7 @@ public class InvitefreindscontactsActivity extends AppCompatActivity implements 
                 getInviteCodeCopy();
                 break;
             case R.id.btn_contact:
-                //startActivity(new Intent(InvitefreindscontactsActivity.this, InviteFriendSelectContactsActivity.class));
+                startActivity(new Intent(InvitefreindscontactsActivity.this, InviteFriendSelectContactsActivity.class));
                 break;
         }
     }
@@ -71,7 +70,6 @@ public class InvitefreindscontactsActivity extends AppCompatActivity implements 
         ClipData clip = ClipData.newPlainText("Copied", star_CodeCopy);
         clipboard.setPrimaryClip(clip);
     }
-
 
     private void getInvitecode() {
         AsyncHttpClient client = new AsyncHttpClient();

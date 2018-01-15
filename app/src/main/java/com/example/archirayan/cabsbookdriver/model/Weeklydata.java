@@ -24,6 +24,30 @@ public class Weeklydata {
     @SerializedName("date1")
     private String date1;
 
+
+    public String getS_date() {
+        return s_date;
+    }
+
+    public void setS_date(String s_date) {
+        this.s_date = s_date;
+    }
+
+    public String getE_date() {
+        return e_date;
+    }
+
+    public void setE_date(String e_date) {
+        this.e_date = e_date;
+    }
+
+    @SerializedName("s_date")
+    private String s_date;
+
+    @SerializedName("e_date")
+    private String e_date;
+
+
     public String getDate() {
         return date;
     }

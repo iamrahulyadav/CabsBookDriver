@@ -98,10 +98,19 @@
 
                 <com.github.mikephil.charting.charts.LineChart
                     android:id="@+id/linechart"
-                    android:layout_width="@dimen/_250sdp"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_margin="@dimen/_10sdp"
                     android:layout_height="@dimen/_150sdp"
+                    android:visibility="gone"
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/_20sdp"/>
+
+                <com.github.mikephil.charting.charts.ScatterChart
+                    android:id="@+id/chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center" />
 
             </LinearLayout>
 

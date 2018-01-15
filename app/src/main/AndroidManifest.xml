@@ -13,6 +13,7 @@
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -152,6 +153,8 @@
         <activity android:name=".activity.PromotionsActivity"></activity>
         <activity android:name=".activity.InvitefreindscontactsActivity"></activity>
         <activity android:name=".activity.InvitefreindssharecontactsActivity"></activity>
+        <activity android:name=".activity.InviteFriendSelectContactsActivity"></activity>
+        <activity android:name=".activity.DailyEarninigsActivity"></activity>
     </application>
 
 </manifest>

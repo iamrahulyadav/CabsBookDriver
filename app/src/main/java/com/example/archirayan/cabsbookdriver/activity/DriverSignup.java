@@ -203,9 +203,6 @@ public class DriverSignup extends AppCompatActivity implements LocationListener,
                 Log.e(TAG, "LOGIN RESPONSE-" + response);
                 DriverRegisterMainResponse model =new Gson().fromJson(new String(String.valueOf(response)),DriverRegisterMainResponse.class);
                 if (model.getStatus().equalsIgnoreCase("true")) {
-                    Utils.WriteSharePrefrence(DriverSignup.this, Constant.DRIVERID,model.getData().getId());
-                    String Userid = Utils.ReadSharePrefrence(DriverSignup.this,Constant.DRIVERID);
-                    Log.e(TAG,"READ SHARED==>"+Userid);
                     Utils.WriteSharePrefrence(DriverSignup.this, Constant.OTP,model.getData().getOtp());
                     String otp = Utils.ReadSharePrefrence(DriverSignup.this,Constant.OTP);
                     Log.e(TAG,"READ SHARED==>"+otp);
