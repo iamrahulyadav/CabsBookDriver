@@ -23,7 +23,6 @@ import java.util.ArrayList;
 
 public class PastWeeksAdaper extends RecyclerView.Adapter<PastWeeksAdaper.ViewHolder> {
 
-
     public static String str_StartDate, str_EndDate;
     private Context context;
     private ArrayList<Weeklydata> weeklydatas;
@@ -33,14 +32,12 @@ public class PastWeeksAdaper extends RecyclerView.Adapter<PastWeeksAdaper.ViewHo
         this.weeklydatas = weeklydatas;
     }
 
-
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View viewtype = LayoutInflater.from(parent.getContext()).inflate(R.layout.pastweek_row, parent, false);
         return new ViewHolder(viewtype);
     }
-
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position)
@@ -72,7 +69,6 @@ public class PastWeeksAdaper extends RecyclerView.Adapter<PastWeeksAdaper.ViewHo
             txt_time_and_date = (TextView) itemView.findViewById(R.id.txt_time_and_date);
             txt_trip_fare = (TextView) itemView.findViewById(R.id.txt_trip_fare);
             linear_row = itemView.findViewById(R.id.linear_row);
-
         }
     }
 }

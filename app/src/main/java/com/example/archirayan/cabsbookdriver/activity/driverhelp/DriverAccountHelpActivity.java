@@ -3,70 +3,95 @@ package com.example.archirayan.cabsbookdriver.activity.driverhelp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.archirayan.cabsbookdriver.R;
 import com.example.archirayan.cabsbookdriver.Utils.Utils;
+import com.example.archirayan.cabsbookdriver.adapter.HelpMainAdapter;
 import com.example.archirayan.cabsbookdriver.model.Constant;
+import com.example.archirayan.cabsbookdriver.model.GetHelpMainListResponse;
+import com.example.archirayan.cabsbookdriver.model.HelpMainList;
+import com.google.gson.Gson;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
 
-public class DriverAccountHelpActivity extends AppCompatActivity implements View.OnClickListener {
-    public LinearLayout llayoutguidedriving_cabs, llayoutguidedriving_cabs2, llayout_accountpayment3, llayout_signingup4, llayout_more5;
-    ImageView img_back_driver_profile;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
+import cz.msebera.android.httpclient.Header;
+
+public class DriverAccountHelpActivity extends AppCompatActivity {
+
+    private static final String TAG = "DriverAccountHelpActivity";
+    private RecyclerView recycler_view_help;
+    private ImageView img_back_driver_profile;
+    private HelpMainAdapter helpMainAdapter;
+    private ArrayList<HelpMainList> helpMainLists;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_account_help);
-        FindviewById();
-        Click();
-    }
 
-    private void Click() {
-        img_back_driver_profile.setOnClickListener(this);
-        llayoutguidedriving_cabs.setOnClickListener(this);
-        llayoutguidedriving_cabs2.setOnClickListener(this);
-        llayout_accountpayment3.setOnClickListener(this);
-        llayout_signingup4.setOnClickListener(this);
-        llayout_more5.setOnClickListener(this);
-    }
+        img_back_driver_profile = (ImageView) findViewById(R.id.img_back_driver_profile);
 
-    private void FindviewById() {
-        img_back_driver_profile = findViewById(R.id.img_back_driver_profile);
-        llayoutguidedriving_cabs = findViewById(R.id.llayoutguidedriving_cabs);
-        llayoutguidedriving_cabs2 = findViewById(R.id.llayoutguidedriving_cabs2);
-        llayout_accountpayment3 = findViewById(R.id.llayout_accountpayment3);
-        llayout_signingup4 = findViewById(R.id.llayout_signingup4);
-        llayout_more5 = findViewById(R.id.llayout_more5);
-    }
+        recycler_view_help = (RecyclerView) findViewById(R.id.recycler_view_help);
+        recycler_view_help.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(DriverAccountHelpActivity.this);
+        recycler_view_help.setLayoutManager(layoutManager);
+        getHelpMainModules();
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.img_back_driver_profile:
+        img_back_driver_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 onBackPressed();
-                break;
-            case R.id.llayoutguidedriving_cabs:
-                startActivity(new Intent(DriverAccountHelpActivity.this, DriverAccountHelpGuideDrivingCabsActivity.class));
-                Utils.WriteSharePrefrence(DriverAccountHelpActivity.this, Constant.HELP_MAINPAGE, "1");
-                break;
-            case R.id.llayoutguidedriving_cabs2:
-                startActivity(new Intent(DriverAccountHelpActivity.this, DriverAccountHelpGuideDrivingCabsActivity.class));
-                Utils.WriteSharePrefrence(DriverAccountHelpActivity.this, Constant.HELP_MAINPAGE, "2");
-                break;
-            case R.id.llayout_accountpayment3:
-                startActivity(new Intent(DriverAccountHelpActivity.this, DriverAccountHelpGuideDrivingCabsActivity.class));
-                Utils.WriteSharePrefrence(DriverAccountHelpActivity.this, Constant.HELP_MAINPAGE, "3");
-                break;
-            case R.id.llayout_signingup4:
-                startActivity(new Intent(DriverAccountHelpActivity.this, DriverAccountHelpGuideDrivingCabsActivity.class));
-                Utils.WriteSharePrefrence(DriverAccountHelpActivity.this, Constant.HELP_MAINPAGE, "4");
-                break;
-            case R.id.llayout_more5:
-                startActivity(new Intent(DriverAccountHelpActivity.this, DriverAccountHelpGuideDrivingCabsActivity.class));
-                Utils.WriteSharePrefrence(DriverAccountHelpActivity.this, Constant.HELP_MAINPAGE, "5");
-                break;
-        }
+            }
+        });
+    }
+
+    private void getHelpMainModules() {
+        helpMainLists = new ArrayList<>();
+        AsyncHttpClient client = new AsyncHttpClient();
+        RequestParams params = new RequestParams();
+
+        client.get(DriverAccountHelpActivity.this, Constant.BASE_URL+"driver_hepl_catagory_list.php?", new JsonHttpResponseHandler() {
+            @Override
+            public void onStart() {
+                super.onStart();
+            }
+            @Override
+            public void onFinish() {
+
+                super.onFinish();
+            }
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                super.onSuccess(statusCode, headers, response);
+                Log.e(TAG, "LOGIN RESPONSE-" + response);
+                GetHelpMainListResponse model = new Gson().fromJson(new String(String.valueOf(response)), GetHelpMainListResponse.class);
+                if (model.getStatus().equalsIgnoreCase("true")) {
+                    helpMainLists = model.getData();
+                    helpMainAdapter = new HelpMainAdapter(DriverAccountHelpActivity.this, helpMainLists);
+                    RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(DriverAccountHelpActivity.this);
+                    recycler_view_help.setLayoutManager(mLayoutManager);
+                    recycler_view_help.setItemAnimator(new DefaultItemAnimator());
+                    recycler_view_help.setAdapter(helpMainAdapter);
+                    helpMainAdapter.notifyDataSetChanged();
+                }
+            }
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                super.onFailure(statusCode, headers, responseString, throwable);
+                Log.e(TAG, throwable.getMessage());
+            }
+        });
     }
 }
