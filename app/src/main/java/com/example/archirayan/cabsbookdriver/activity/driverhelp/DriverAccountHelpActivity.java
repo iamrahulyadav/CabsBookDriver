@@ -1,5 +1,6 @@
 package com.example.archirayan.cabsbookdriver.activity.driverhelp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -72,6 +73,7 @@ public class DriverAccountHelpActivity extends AppCompatActivity {
 
                 super.onFinish();
             }
+            @SuppressLint("LongLogTag")
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 super.onSuccess(statusCode, headers, response);
@@ -85,8 +87,10 @@ public class DriverAccountHelpActivity extends AppCompatActivity {
                     recycler_view_help.setItemAnimator(new DefaultItemAnimator());
                     recycler_view_help.setAdapter(helpMainAdapter);
                     helpMainAdapter.notifyDataSetChanged();
+
                 }
             }
+            @SuppressLint("LongLogTag")
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                 super.onFailure(statusCode, headers, responseString, throwable);

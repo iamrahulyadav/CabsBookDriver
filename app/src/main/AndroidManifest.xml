@@ -150,11 +150,18 @@
         <activity android:name=".activity.RiderFeedback" />
         <activity android:name=".activity.DriverShareMytripgetAllContacts" />
         <activity android:name=".activity.DriverShareMytripMain" />
-        <activity android:name=".activity.PromotionsActivity"></activity>
-        <activity android:name=".activity.InvitefreindscontactsActivity"></activity>
-        <activity android:name=".activity.InvitefreindssharecontactsActivity"></activity>
-        <activity android:name=".activity.InviteFriendSelectContactsActivity"></activity>
-        <activity android:name=".activity.DailyEarninigsActivity"></activity>
+        <activity android:name=".activity.PromotionsActivity" />
+        <activity android:name=".activity.InvitefreindscontactsActivity" />
+        <activity android:name=".activity.InvitefreindssharecontactsActivity" />
+        <activity android:name=".activity.InviteFriendSelectContactsActivity" />
+        <activity android:name=".activity.DailyEarninigsActivity" />
+        <activity android:name=".activity.DriverHelpOneModule">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
