@@ -1,6 +1,7 @@
 package com.example.archirayan.cabsbookdriver.activity;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -37,6 +38,7 @@ public class DriverHelpOneModule extends AppCompatActivity {
     private HelpOneModuleAdepter helpOneModuleAdepter;
     private ArrayList<HelpOneModule> helpOneModules;
     private String help_id;
+    private ProgressDialog pd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +49,7 @@ public class DriverHelpOneModule extends AppCompatActivity {
         recycler_view_help_one.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(DriverHelpOneModule.this);
         recycler_view_help_one.setLayoutManager(layoutManager);
-        getHelpOneModules();
+
         img_back_help_one = (ImageView) findViewById(R.id.img_back_help_one);
 
         img_back_help_one.setOnClickListener(new View.OnClickListener() {
@@ -58,14 +60,18 @@ public class DriverHelpOneModule extends AppCompatActivity {
         });
 
         help_id = getIntent().getStringExtra("id");
+        getHelpOneModules();
     }
 
     private void getHelpOneModules() {
+        pd = new ProgressDialog(DriverHelpOneModule.this);
+        pd.setMessage("loading...");
+        pd.setCancelable(false);
+        pd.show();
         helpOneModules = new ArrayList<>();
         AsyncHttpClient client = new AsyncHttpClient();
         RequestParams params = new RequestParams();
-        params.put("hale_catagory_id",help_id);
-
+        params.put("help_catagory_id",help_id);
         Log.e(TAG, "URL:" + Constant.BASE_URL + "driver_hepl_catagory_list.php?" + params);
         Log.e(TAG, params.toString());
         client.post(DriverHelpOneModule.this, Constant.BASE_URL+"driver_hepl_catagory_list.php?",params, new JsonHttpResponseHandler() {
@@ -83,6 +89,7 @@ public class DriverHelpOneModule extends AppCompatActivity {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 super.onSuccess(statusCode, headers, response);
                 Log.e(TAG, "LOGIN RESPONSE-" + response);
+                pd.dismiss();
                 GetHelpOneResponse model = new Gson().fromJson(new String(String.valueOf(response)), GetHelpOneResponse.class);
                 if (model.getStatus().equalsIgnoreCase("true")) {
                     helpOneModules = model.getData();

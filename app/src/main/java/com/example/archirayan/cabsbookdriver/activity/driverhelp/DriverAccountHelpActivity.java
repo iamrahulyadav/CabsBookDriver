@@ -1,6 +1,7 @@
 package com.example.archirayan.cabsbookdriver.activity.driverhelp;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -36,6 +37,7 @@ public class DriverAccountHelpActivity extends AppCompatActivity {
     private ImageView img_back_driver_profile;
     private HelpMainAdapter helpMainAdapter;
     private ArrayList<HelpMainList> helpMainLists;
+    private ProgressDialog pd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,10 @@ public class DriverAccountHelpActivity extends AppCompatActivity {
     }
 
     private void getHelpMainModules() {
+        pd = new ProgressDialog(DriverAccountHelpActivity.this);
+        pd.setMessage("loading...");
+        pd.setCancelable(false);
+        pd.show();
         helpMainLists = new ArrayList<>();
         AsyncHttpClient client = new AsyncHttpClient();
         RequestParams params = new RequestParams();
@@ -79,6 +85,7 @@ public class DriverAccountHelpActivity extends AppCompatActivity {
                 super.onSuccess(statusCode, headers, response);
                 Log.e(TAG, "LOGIN RESPONSE-" + response);
                 GetHelpMainListResponse model = new Gson().fromJson(new String(String.valueOf(response)), GetHelpMainListResponse.class);
+                pd.dismiss();
                 if (model.getStatus().equalsIgnoreCase("true")) {
                     helpMainLists = model.getData();
                     helpMainAdapter = new HelpMainAdapter(DriverAccountHelpActivity.this, helpMainLists);
