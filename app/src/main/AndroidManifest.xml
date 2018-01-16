@@ -162,7 +162,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.DriverHelpTwoModule"></activity>
+        <activity android:name=".activity.DriverHelpTwoModule" />
+        <activity android:name=".activity.HelpDiscription"></activity>
     </application>
 
 </manifest>

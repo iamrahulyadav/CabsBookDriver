@@ -1,6 +1,7 @@
 package com.example.archirayan.cabsbookdriver.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,6 +11,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.archirayan.cabsbookdriver.R;
+import com.example.archirayan.cabsbookdriver.Utils.Utils;
+import com.example.archirayan.cabsbookdriver.activity.HelpDiscription;
+import com.example.archirayan.cabsbookdriver.model.Constant;
 import com.example.archirayan.cabsbookdriver.model.HelptwoModule;
 
 import java.util.ArrayList;
@@ -34,19 +38,21 @@ public class HelpTwoModuleAdepter extends RecyclerView.Adapter<HelpTwoModuleAdep
         return new ViewHolder(viewtype);
     }
 
-
     @Override
-    public void onBindViewHolder(HelpTwoModuleAdepter.ViewHolder holder, int position) {
+    public void onBindViewHolder(HelpTwoModuleAdepter.ViewHolder holder, final int position) {
         holder.txt_help_module.setText(helptwoModules.get(position).getName());
 
         holder.card_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Utils.WriteSharePrefrence(context.getApplicationContext(),Constant.HELP_ITEM,helptwoModules.get(position).getName());
+                String name = Utils.ReadSharePrefrence(context.getApplicationContext(),Constant.HELP_ITEM);
+                Utils.WriteSharePrefrence(context.getApplicationContext(), Constant.Discription,helptwoModules.get(position).getDiscription());
+                String discription = Utils.ReadSharePrefrence(context.getApplicationContext(),Constant.Discription);
+                context.startActivity(new Intent(context.getApplicationContext(),HelpDiscription.class));
             }
         });
     }
-
 
     @Override
     public int getItemCount() {

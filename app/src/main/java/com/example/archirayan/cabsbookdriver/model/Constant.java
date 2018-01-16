@@ -60,4 +60,6 @@ public class Constant {
     public static final String Driver_Trip_Id = "driver_trip_id";
     public static final String DriverName = "drivername";
     public static final String PlateNumber = "platename";
+    public static final String Discription = "discription";
+    public static final String HELP_ITEM = "help_item";
 }
