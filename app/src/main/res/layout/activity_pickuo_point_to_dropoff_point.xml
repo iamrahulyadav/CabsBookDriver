@@ -4,6 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
+        android:id="@+id/linear_seekvar_route"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_70sdp"
         android:orientation="vertical">
@@ -35,12 +36,12 @@
                     android:textColor="#111DE5"
                     android:textSize="@dimen/_15sdp" />
             </LinearLayout>
-
-            <SeekBar
-                android:id="@+id/seekbar_destance"
+            <View
+                android:id="@+id/view_sixth_1"
                 android:layout_width="@dimen/_180sdp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_20sdp"/>
+                android:layout_height="0.1dp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="#55000000"/>
 
             <LinearLayout
                 android:layout_width="@dimen/_60sdp"
@@ -66,6 +67,28 @@
         </LinearLayout>
     </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/linear_completed_trip"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:gravity="bottom">
+
+                <Button
+                    android:id="@+id/btn_completed_trip"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Completed"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    android:background="#fd3e3e"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+            </LinearLayout>
+
+
+
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -76,5 +99,8 @@
     android:layout_marginRight="@dimen/_5sdp"
     android:layout_marginLeft="@dimen/_5sdp"
     android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_5sdp"
     tools:context="com.example.archirayan.cabsbookdriver.activity.PickuoPointToDropoffPoint" />
+
+
 </LinearLayout>

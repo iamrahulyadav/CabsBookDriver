@@ -56,7 +56,6 @@ public class StarttoPickupPointActivity extends FragmentActivity implements OnMa
     private static final String TAG = "StarttoPickupPointActivity";
     private GoogleMap mMap;
     private CircleImageView img_start_car,img_pickup_car;
-    private SeekBar seekbar_destance;
     private Location Currentlocation;
     private double latitud;
     private double longitud;
@@ -89,7 +88,6 @@ public class StarttoPickupPointActivity extends FragmentActivity implements OnMa
         str_Address = Utils.ReadSharePrefrence(StarttoPickupPointActivity.this,Constant.SOURCEADDTESS);
         str_Address_two = Utils.ReadSharePrefrence(StarttoPickupPointActivity.this,Constant.DETINATIONADDTESS);
 
-
         img_start_car = (CircleImageView) findViewById(R.id.img_start_car);
         img_pickup_car = (CircleImageView) findViewById(R.id.img_pickup_car);
 
@@ -97,25 +95,6 @@ public class StarttoPickupPointActivity extends FragmentActivity implements OnMa
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(StarttoPickupPointActivity.this,PickuoPointToDropoffPoint.class));
-            }
-        });
-
-        seekbar_destance = (SeekBar) findViewById(R.id.seekbar_destance);
-
-        seekbar_destance.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
             }
         });
 
@@ -132,10 +111,7 @@ public class StarttoPickupPointActivity extends FragmentActivity implements OnMa
             Log.d("onCreate","Google Play Services available.");
         }
         //getDirections();
-
     }
-
-
 
     @Override
     public void onMapReady(GoogleMap googleMap) {

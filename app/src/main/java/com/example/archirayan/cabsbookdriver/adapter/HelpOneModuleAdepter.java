@@ -38,7 +38,6 @@ public class HelpOneModuleAdepter extends RecyclerView.Adapter<HelpOneModuleAdep
         return new ViewHolder(viewtype);
     }
 
-
     @Override
     public void onBindViewHolder(HelpOneModuleAdepter.ViewHolder holder, final int position) {
         holder.txt_help_module.setText(helpOneModules.get(position).getName());

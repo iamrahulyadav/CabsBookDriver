@@ -128,15 +128,13 @@
         <activity android:name=".activity.CurrentTripforshowlocation" />
         <activity android:name=".activity.UserContectActivity" />
         <activity android:name=".activity.StarttoPickupPointActivity" />
-        <activity android:name=".activity.driverhelp.DriverAccountHelpActivity" />
+        <activity android:name=".activity.DriverAccountHelpActivity" />
         <activity android:name=".activity.PickuoPointToDropoffPoint" />
         <activity android:name=".activity.DriverProfileSetCountryActivity" />
         <activity android:name=".activity.DriverProfileRecommandedCityActivity" />
         <activity android:name=".activity.DriverProfileFunfactActivity" />
         <activity android:name=".activity.DriverProfileSetYourselfActivity" />
         <activity android:name=".activity.DriverProfileSetFavouritStory" />
-        <activity android:name=".activity.driverhelp.DriverAccountHelpGuidDrivingCabs1Activity" />
-        <activity android:name=".activity.driverhelp.DriverAccountHelpGuideDrivingCabsActivity" />
         <activity android:name=".activity.StarComplimentsServices" />
         <activity android:name=".activity.ExpertNavigationComliment" />
         <activity android:name=".activity.GreatAmenitiesCompliment" />
@@ -155,13 +153,7 @@
         <activity android:name=".activity.InvitefreindssharecontactsActivity" />
         <activity android:name=".activity.InviteFriendSelectContactsActivity" />
         <activity android:name=".activity.DailyEarninigsActivity" />
-        <activity android:name=".activity.DriverHelpOneModule">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".activity.DriverHelpOneModule"></activity>
         <activity android:name=".activity.DriverHelpTwoModule" />
         <activity android:name=".activity.HelpDiscription"></activity>
     </application>

@@ -41,31 +41,8 @@ public class MyAndroidFirebaseMsgService extends FirebaseMessagingService {
     private File file;
     private Bitmap bitmap;
 
-
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        /*// TODO(developer): Handle FCM messages here.
-        Log.d(TAG, "From: " + remoteMessage.getFrom());
-        if (remoteMessage.getData().size() > 0) {
-            Log.d("Message_data_payload", "" + remoteMessage.getData());
-            String jsonstring = remoteMessage.getData().toString();
-            Log.e("str",""+jsonstring);
-            try {
-                JSONObject mainObject = new JSONObject(jsonstring);
-                Log.d("MAINA@@", "" + mainObject);
-                event_title = mainObject.getString(remoteMessage.getNotification().getBody());
-                Log.e("msg",""+event_title);
-                event_date = mainObject.getString("push_title").toString();
-                Log.e("date",""+event_date);
-
-            }
-            catch (JSONException e)
-            {
-                Log.d("Error", e.toString());
-            }
-            sendNotification(remoteMessage.getData().toString());
-        }*/
-
         // TODO(developer): Handle FCM messages here.
         Log.e(TAG, "driver_From: " + remoteMessage.getFrom());
 
@@ -134,40 +111,11 @@ public class MyAndroidFirebaseMsgService extends FirebaseMessagingService {
         Log.d(TAG, "Short lived task is done.");
     }
 
-    /*private void sendNotification(String messageBody) {
-
-            Intent intent = new Intent(this, ReqestFordriver.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            intent.putExtra("message",str_Id);
-            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,
-                    PendingIntent.FLAG_ONE_SHOT);
-            Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-            NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
-                    .setSmallIcon(R.drawable.appicon)
-                    .setContentTitle("Cabs Book")
-                    .setContentText(event_title + "\n" + event_date)
-                    .setAutoCancel(true)
-                    .setSound(defaultSoundUri)
-                    .setContentIntent(pendingIntent);
-            NotificationManager notificationManager =
-                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-            notificationManager.notify(0, notificationBuilder.build());
-
-    }*/
-
 
     private void sendNotification(String messageBody) {
 
         Intent intent = new Intent(this, CurrentTrips.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        Intent intentConfirm = new Intent(this, DriverMainPage.class);
-        intentConfirm.setAction("CONFIRM");
-        intentConfirm.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        Intent intentCancel = new Intent(this, DriverMainPage.class);
-        intentCancel.setAction("CANCEL");
-        intentCancel.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        PendingIntent pendingIntentConfirm = PendingIntent.getBroadcast(this, 0, intentConfirm, PendingIntent.FLAG_CANCEL_CURRENT);
-        PendingIntent pendingIntentCancel = PendingIntent.getBroadcast(this, 1, intentCancel, PendingIntent.FLAG_CANCEL_CURRENT);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
         Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);

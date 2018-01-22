@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.archirayan.cabsbookdriver.activity.driverhelp.DriverAccountHelpActivity">
+    tools:context="com.example.archirayan.cabsbookdriver.activity.DriverAccountHelpActivity">
 
     <LinearLayout
         android:id="@+id/linear_current_trip"

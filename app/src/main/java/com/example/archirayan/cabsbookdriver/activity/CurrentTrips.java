@@ -49,7 +49,6 @@ public class CurrentTrips extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(CurrentTrips.this,UserContectActivity.class));
-
             }
         });
 
@@ -75,7 +74,6 @@ public class CurrentTrips extends AppCompatActivity {
             Picasso.with(CurrentTrips.this).load(getImageStr).placeholder(R.drawable.ic_profile).into(img_userpic);
 
         }
-
 
         img_back_currenttrip = (ImageView) findViewById(R.id.img_back_currenttrip);
         img_back_currenttrip.setOnClickListener(new View.OnClickListener() {
@@ -115,11 +113,10 @@ public class CurrentTrips extends AppCompatActivity {
                 sendcancleNotification();
             }
         });
-
     }
 
     private void sendcancleNotification() {
-        final AsyncHttpClient client = new AsyncHttpClient();
+        AsyncHttpClient client = new AsyncHttpClient();
         RequestParams googleparams = new RequestParams();
         googleparams.put("driver_id", Utils.ReadSharePrefrence(CurrentTrips.this, Constant.DRIVERID));
         googleparams.put("user_id", Utils.ReadSharePrefrence(CurrentTrips.this,Constant.USERID));
@@ -141,8 +138,6 @@ public class CurrentTrips extends AppCompatActivity {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 super.onSuccess(statusCode, headers, response);
                 Log.e(TAG, "Notify RESPONSE-" + response);
-
-
             }
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
@@ -158,7 +153,6 @@ public class CurrentTrips extends AppCompatActivity {
         RequestParams googleparams = new RequestParams();
         googleparams.put("driver_id", Utils.ReadSharePrefrence(CurrentTrips.this, Constant.DRIVERID));
         googleparams.put("user_id", Utils.ReadSharePrefrence(CurrentTrips.this,Constant.USERID));
-
 
         Log.e(TAG, "USERURL:" + Constant.BASE_URL + "request_to_user_notification.php?" + googleparams);
         Log.e(TAG, googleparams.toString());
@@ -180,7 +174,6 @@ public class CurrentTrips extends AppCompatActivity {
                 if (dmodel.getStatus().equalsIgnoreCase("true")){
                     startActivity(new Intent(CurrentTrips.this,CurrentTripforshowlocation.class));
                 }
-
             }
             @Override
             public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {

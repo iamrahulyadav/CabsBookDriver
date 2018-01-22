@@ -35,7 +35,5 @@ public class HelpDiscription extends AppCompatActivity {
         txt_help_discription = (TextView) findViewById(R.id.txt_help_discription);
 
         txt_help_discription.setText(Utils.ReadSharePrefrence(HelpDiscription.this, Constant.Discription));
-
-
     }
 }

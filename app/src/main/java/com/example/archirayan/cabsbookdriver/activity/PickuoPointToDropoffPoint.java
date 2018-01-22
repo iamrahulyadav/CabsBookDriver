@@ -2,6 +2,7 @@ package com.example.archirayan.cabsbookdriver.activity;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -15,6 +16,8 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
@@ -24,7 +27,10 @@ import com.directions.route.RouteException;
 import com.directions.route.Routing;
 import com.directions.route.RoutingListener;
 import com.example.archirayan.cabsbookdriver.R;
+import com.example.archirayan.cabsbookdriver.Utils.Constant;
 import com.example.archirayan.cabsbookdriver.Utils.Utils;
+import com.example.archirayan.cabsbookdriver.model.CompleteTripResponse;
+import com.example.archirayan.cabsbookdriver.model.FirebaseNotificationResponse;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -42,9 +48,11 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.yahoo.mobile.client.android.util.rangeseekbar.RangeSeekBar;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -63,7 +71,6 @@ public class PickuoPointToDropoffPoint extends FragmentActivity implements OnMap
     private static final String TAG = "PickuoPointToDropoffPoint";
     private GoogleMap mMap;
     private CircleImageView img_start_car,img_pickup_car;
-    private SeekBar seekbar_destance;
     private Location Currentlocation;
     private double latitud;
     private double longitud;
@@ -85,6 +92,8 @@ public class PickuoPointToDropoffPoint extends FragmentActivity implements OnMap
     private double tolatitude;
     private double tolongitude;
     private LatLng destination;
+    private LinearLayout linear_seekvar_route, linear_completed_trip;
+    private Button btn_completed_trip;
     private static final int[] COLORS = new int[]{R.color.primary_dark, R.color.primary, R.color.primary_light, R.color.accent, R.color.primary_dark_material_light};
 
     @Override
@@ -92,12 +101,11 @@ public class PickuoPointToDropoffPoint extends FragmentActivity implements OnMap
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pickuo_point_to_dropoff_point);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+        final SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
         str_detination_address = Utils.ReadSharePrefrence(PickuoPointToDropoffPoint.this, com.example.archirayan.cabsbookdriver.model.Constant.USER_DETINATION).toString();
-
 
         img_start_car = (CircleImageView) findViewById(R.id.img_start_car);
         img_pickup_car = (CircleImageView) findViewById(R.id.img_pickup_car);
@@ -108,8 +116,6 @@ public class PickuoPointToDropoffPoint extends FragmentActivity implements OnMap
                 startActivity(new Intent(PickuoPointToDropoffPoint.this,PickuoPointToDropoffPoint.class));
             }
         });
-
-        seekbar_destance = (SeekBar) findViewById(R.id.seekbar_destance);
 
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             checkLocationPermission();
@@ -123,7 +129,59 @@ public class PickuoPointToDropoffPoint extends FragmentActivity implements OnMap
         else {
             Log.d("onCreate","Google Play Services available.");
         }
+
+        linear_seekvar_route = (LinearLayout) findViewById(R.id.linear_seekvar_route);
+        linear_completed_trip = (LinearLayout) findViewById(R.id.linear_completed_trip);
+
+        btn_completed_trip = (Button) findViewById(R.id.btn_completed_trip);
+
+        btn_completed_trip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getTripCompleted();
+
+            }
+        });
+
         getAddressLocation();
+    }
+
+    @SuppressLint("LongLogTag")
+    private void getTripCompleted() {
+        AsyncHttpClient client = new AsyncHttpClient();
+        RequestParams googleparams = new RequestParams();
+        googleparams.put("trip_id",Utils.ReadSharePrefrence(PickuoPointToDropoffPoint.this, com.example.archirayan.cabsbookdriver.model.Constant.TRIP_ID));
+
+        Log.e(TAG, "USERURL:" + com.example.archirayan.cabsbookdriver.model.Constant.BASE_URL + "success_trip.php?" + googleparams);
+        Log.e(TAG, googleparams.toString());
+        client.post(this, com.example.archirayan.cabsbookdriver.model.Constant.BASE_URL+"success_trip.php?",googleparams, new JsonHttpResponseHandler() {
+            @Override
+            public void onStart() {
+                super.onStart();
+            }
+            @Override
+            public void onFinish() {
+
+                super.onFinish();
+            }
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                super.onSuccess(statusCode, headers, response);
+                Log.e(TAG, "Notify RESPONSE-" + response);
+                CompleteTripResponse dmodel = new Gson().fromJson(new String(String.valueOf(response)),CompleteTripResponse.class);
+                if (dmodel.getStatus().equalsIgnoreCase("true")){
+                    startActivity(new Intent(PickuoPointToDropoffPoint.this,DriverMainPage.class));
+                }
+
+
+
+            }
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                super.onFailure(statusCode, headers, responseString, throwable);
+                Log.e(TAG, throwable.getMessage());
+            }
+        });
     }
 
     @SuppressLint("LongLogTag")
