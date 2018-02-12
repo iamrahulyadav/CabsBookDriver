@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="com.seatgeek:placesautocomplete-0.3-SNAPSHOT">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/placesautocomplete-0.3-SNAPSHOT.aar/9c490288a0f68816c2bdfed2e1ae5e90/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/placesautocomplete-0.3-SNAPSHOT.aar/9c490288a0f68816c2bdfed2e1ae5e90/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/placesautocomplete-0.3-SNAPSHOT.aar/a5b9c3fca2c774dcdbe9594d0bde7f99/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/placesautocomplete-0.3-SNAPSHOT.aar/a5b9c3fca2c774dcdbe9594d0bde7f99/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

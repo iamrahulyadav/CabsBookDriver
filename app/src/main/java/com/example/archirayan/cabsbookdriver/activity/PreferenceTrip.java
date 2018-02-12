@@ -59,7 +59,7 @@ public class PreferenceTrip extends AppCompatActivity {
         img_back_preference.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PreferenceTrip.this,CurrentTrips.class));
+             onBackPressed();
             }
         });
 

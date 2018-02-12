@@ -21,7 +21,6 @@ import com.example.archirayan.cabsbookdriver.adapter.AllSelectContactsAdapter;
 
 import static com.example.archirayan.cabsbookdriver.adapter.AllSelectContactsAdapter.strCreditId;
 
-
 public class DriverShareMytripMain extends AppCompatActivity implements View.OnClickListener {
     public ImageView img_back_acceptance_tital;
     public LinearLayout llayout_addressbook;

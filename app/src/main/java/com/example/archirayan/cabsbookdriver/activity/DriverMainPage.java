@@ -111,7 +111,56 @@ public class DriverMainPage extends AppCompatActivity implements LocationListene
         linear_feedback = (LinearLayout) findViewById(R.id.linear_feedback);
         linear_promotions = (LinearLayout) findViewById(R.id.linear_promotions);
         linear_invite_friend = (LinearLayout) findViewById(R.id.linear_invite_friend);
+        linear_about = (LinearLayout) findViewById(R.id.linear_about);
 
+        linear_doc = (LinearLayout) findViewById(R.id.linear_doc);
+        linear_help = findViewById(R.id.linear_help);
+        linear_account = (LinearLayout) findViewById(R.id.linear_account);
+        linear_activity_account = (LinearLayout) findViewById(R.id.linear_activity_account);
+        linear_profilcontent = (LinearLayout) findViewById(R.id.linear_profilcontent);
+        linear_activity_home = (LinearLayout) findViewById(R.id.linear_activity_home);
+        linear_home = (LinearLayout) findViewById(R.id.linear_home);
+        linear_earnings = (LinearLayout) findViewById(R.id.linear_earnings);
+        linear_activity_earning = (LinearLayout) findViewById(R.id.linear_activity_earning);
+        linear_activity_rating = (LinearLayout) findViewById(R.id.linear_activity_rating);
+        linear_rating = (LinearLayout) findViewById(R.id.linear_rating);
+        line2 = (LinearLayout) findViewById(R.id.line2);
+        line1 = (LinearLayout) findViewById(R.id.line1);
+        linear_earningweek = (LinearLayout) findViewById(R.id.linear_earningweek);
+        linear_starrating = (LinearLayout) findViewById(R.id.linear_starrating);
+        linear_acceptancerate = (LinearLayout) findViewById(R.id.linear_acceptancerate);
+        linear_cancelling = (LinearLayout) findViewById(R.id.linear_cancelling);
+        linear_compliments = (LinearLayout) findViewById(R.id.linear_compliments);
+        linear_invites = (LinearLayout) findViewById(R.id.linear_invites);
+        linear_find_trip = (LinearLayout) findViewById(R.id.linear_find_trip);
+        linear_vihical = (LinearLayout) findViewById(R.id.linear_vihical);
+        linear_driverprofile = (LinearLayout) findViewById(R.id.linear_driverprofile);
+        linear_waybill = (LinearLayout) findViewById(R.id.linear_waybill);
+        linear_setting = (LinearLayout) findViewById(R.id.linear_setting);
+        linear_protips = (LinearLayout) findViewById(R.id.linear_protips);
+        linear_feedback = (LinearLayout) findViewById(R.id.linear_feedback);
+        linear_promotions = (LinearLayout) findViewById(R.id.linear_promotions);
+        linear_invite_friend = (LinearLayout) findViewById(R.id.linear_invite_friend);
+
+        img_home = (ImageView) findViewById(R.id.img_home);
+        img_earnings = (ImageView) findViewById(R.id.img_earnings);
+        img_rating = (ImageView) findViewById(R.id.img_rating);
+        img_account = (ImageView) findViewById(R.id.img_account);
+
+        img_home.setImageResource(R.drawable.ic_home_blue);
+        img_earnings.setImageResource(R.drawable.ic_earnings);
+        img_rating.setImageResource(R.drawable.ic_ratings);
+        img_account.setImageResource(R.drawable.ic_account);
+
+        txt_home = (TextView) findViewById(R.id.txt_home);
+        txt_earnings = (TextView) findViewById(R.id.txt_earnings);
+        txt_rating = (TextView) findViewById(R.id.txt_rating);
+        txt_account = (TextView) findViewById(R.id.txt_account);
+
+        txt_home.setTextColor(getResources().getColor(R.color.tital_blue));
+        txt_earnings.setTextColor(getResources().getColor(R.color.white));
+        txt_rating.setTextColor(getResources().getColor(R.color.white));
+        txt_account.setTextColor(getResources().getColor(R.color.white));
 
         linear_invite_friend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,8 +219,6 @@ public class DriverMainPage extends AppCompatActivity implements LocationListene
                     buildGoogleApiClient();
                     googleMap.setMyLocationEnabled(true);
                 }
-
-
             }
         });
 
@@ -309,6 +356,16 @@ public class DriverMainPage extends AppCompatActivity implements LocationListene
                 linear_activity_earning.setVisibility(View.GONE);
                 linear_activity_rating.setVisibility(View.GONE);
 
+                img_home.setImageResource(R.drawable.ic_home);
+                img_earnings.setImageResource(R.drawable.ic_earnings);
+                img_rating.setImageResource(R.drawable.ic_ratings);
+                img_account.setImageResource(R.drawable.ic_account_blue);
+
+                txt_home.setTextColor(getResources().getColor(R.color.white));
+                txt_earnings.setTextColor(getResources().getColor(R.color.white));
+                txt_rating.setTextColor(getResources().getColor(R.color.white));
+                txt_account.setTextColor(getResources().getColor(R.color.tital_blue));
+
             }
         });
         linear_home.setOnClickListener(new View.OnClickListener() {
@@ -318,6 +375,16 @@ public class DriverMainPage extends AppCompatActivity implements LocationListene
                 linear_activity_account.setVisibility(View.GONE);
                 linear_activity_earning.setVisibility(View.GONE);
                 linear_activity_rating.setVisibility(View.GONE);
+
+                img_home.setImageResource(R.drawable.ic_home_blue);
+                img_earnings.setImageResource(R.drawable.ic_earnings);
+                img_rating.setImageResource(R.drawable.ic_ratings);
+                img_account.setImageResource(R.drawable.ic_account);
+
+                txt_home.setTextColor(getResources().getColor(R.color.tital_blue));
+                txt_earnings.setTextColor(getResources().getColor(R.color.white));
+                txt_rating.setTextColor(getResources().getColor(R.color.white));
+                txt_account.setTextColor(getResources().getColor(R.color.white));
 
             }
         });
@@ -329,6 +396,16 @@ public class DriverMainPage extends AppCompatActivity implements LocationListene
                 linear_activity_account.setVisibility(View.GONE);
                 linear_activity_rating.setVisibility(View.GONE);
 
+                img_home.setImageResource(R.drawable.ic_home);
+                img_earnings.setImageResource(R.drawable.ic_earnings_blue);
+                img_rating.setImageResource(R.drawable.ic_ratings);
+                img_account.setImageResource(R.drawable.ic_account);
+
+                txt_home.setTextColor(getResources().getColor(R.color.white));
+                txt_earnings.setTextColor(getResources().getColor(R.color.tital_blue));
+                txt_rating.setTextColor(getResources().getColor(R.color.white));
+                txt_account.setTextColor(getResources().getColor(R.color.white));
+
             }
         });
         linear_rating.setOnClickListener(new View.OnClickListener() {
@@ -338,6 +415,357 @@ public class DriverMainPage extends AppCompatActivity implements LocationListene
                 linear_activity_earning.setVisibility(View.GONE);
                 linear_activity_account.setVisibility(View.GONE);
                 linear_activity_home.setVisibility(View.GONE);
+
+                img_home.setImageResource(R.drawable.ic_home);
+                img_earnings.setImageResource(R.drawable.ic_earnings);
+                img_rating.setImageResource(R.drawable.ic_ratings_blue);
+                img_account.setImageResource(R.drawable.ic_account);
+
+                txt_home.setTextColor(getResources().getColor(R.color.white));
+                txt_earnings.setTextColor(getResources().getColor(R.color.white));
+                txt_rating.setTextColor(getResources().getColor(R.color.tital_blue));
+                txt_account.setTextColor(getResources().getColor(R.color.white));
+
+            }
+        });
+
+        linear_profilcontent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DriverMainPage.this, EditAccount.class));
+            }
+        });
+        txt_signout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(DriverMainPage.this);
+                alertDialogBuilder.setMessage("Are you sure you want to sign out ? ");
+
+                alertDialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                alertDialogBuilder.setPositiveButton("Sign out",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface arg0, int arg1) {
+                                Utils.WriteSharePrefrence(DriverMainPage.this, Constant.DRIVERID, "");
+                                startActivity(new Intent(DriverMainPage.this, MainActivity.class));
+                                finish();
+                            }
+                        });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+            }
+        });
+
+        btn_goonline = (Button) findViewById(R.id.btn_goonline);
+        btn_goonline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(DriverMainPage.this);
+                builder.setMessage("You'll be notified via text and email once you're approved to drive.");
+                builder.setPositiveButton("GOT IT", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        getActiveStatus();
+                        dialog.dismiss();
+                    }
+                });
+                builder.show();
+
+            }
+        });
+        btn_online = (Button) findViewById(R.id.btn_online);
+        btn_online.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(DriverMainPage.this);
+                builder.setMessage("You'll be notified via text and email once you're approved to offline.");
+                builder.setPositiveButton("GOT IT", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        getInActiveStatus();
+                        dialog.dismiss();
+                    }
+                });
+                builder.show();
+
+            }
+        });
+
+
+        linear_help.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                startActivity(new Intent(DriverMainPage.this, DriverAccountHelpActivity.class));
+            }
+        });
+
+
+        getUserDetails();
+        getEnerings();
+        getVehicalDetails();
+        getRatings();
+        getAcceptetionandCancelationRate();
+
+        img_home = (ImageView) findViewById(R.id.img_home);
+        img_earnings = (ImageView) findViewById(R.id.img_earnings);
+        img_rating = (ImageView) findViewById(R.id.img_rating);
+        img_account = (ImageView) findViewById(R.id.img_account);
+
+        img_home.setImageResource(R.drawable.ic_home_blue);
+        img_earnings.setImageResource(R.drawable.ic_earnings);
+        img_rating.setImageResource(R.drawable.ic_ratings);
+        img_account.setImageResource(R.drawable.ic_account);
+
+        txt_home = (TextView) findViewById(R.id.txt_home);
+        txt_earnings = (TextView) findViewById(R.id.txt_earnings);
+        txt_rating = (TextView) findViewById(R.id.txt_rating);
+        txt_account = (TextView) findViewById(R.id.txt_account);
+
+        txt_home.setTextColor(getResources().getColor(R.color.tital_blue));
+        txt_earnings.setTextColor(getResources().getColor(R.color.white));
+        txt_rating.setTextColor(getResources().getColor(R.color.white));
+        txt_account.setTextColor(getResources().getColor(R.color.white));
+
+        linear_invite_friend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DriverMainPage.this,InvitesActivity.class));
+            }
+        });
+
+        linear_promotions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DriverMainPage.this,PromotionsActivity.class));
+            }
+        });
+
+        linear_feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DriverMainPage.this,RiderFeedback.class));
+            }
+        });
+
+        linear_protips.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view){
+                startActivity(new Intent(DriverMainPage.this, DriverRatingProtipsActivity.class));
+            }
+        });
+
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            checkLocationPermission();
+        }
+
+        //Check if Google Play Services Available or not
+        if (!CheckGooglePlayServices()) {
+            Log.d("onCreate", "Finishing test case since Google Play Services are not available");
+            finish();
+
+        }
+        else {
+            Log.d("onCreate","Google Play Services available.");
+        }
+
+
+        img_vihical = (CircleImageView) findViewById(R.id.img_vihical);
+
+        linear_waybill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DriverMainPage.this, WaybillActivity.class));
+            }
+        });
+
+        linear_driverprofile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DriverMainPage.this, DriverProfile.class));
+            }
+        });
+
+        linear_vihical.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DriverMainPage.this, VehicleInformation.class));
+            }
+        });
+
+        linear_find_trip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DriverMainPage.this, CurrentTrips.class));
+            }
+        });
+
+        linear_invites.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DriverMainPage.this, InvitesActivity.class));
+            }
+        });
+
+        linear_compliments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DriverMainPage.this, RiderCompliments.class));
+            }
+        });
+
+        linear_cancelling.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DriverMainPage.this, CancellationDetailsactivity.class));
+            }
+        });
+
+        linear_acceptancerate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DriverMainPage.this, AcceptanceDetails.class));
+            }
+        });
+
+        linear_starrating.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DriverMainPage.this, RatinsDetailsactivity.class));
+            }
+        });
+
+        linear_earningweek.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DriverMainPage.this, WeeklySummary.class));
+            }
+        });
+
+
+        // // TODO: 19/12/17  Click Setting menu...Open Driver Profile...
+
+        linear_setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DriverMainPage.this, DriverprofilesettingActivity.class));
+            }
+        });
+
+
+        linear_about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DriverMainPage.this, DriverAboutActivity.class));
+            }
+        });
+
+
+        linear_doc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DriverMainPage.this, DriverDocumentsActivity.class));
+            }
+        });
+
+
+        txt_signout = (TextView) findViewById(R.id.txt_signout);
+        txt_person_name = (TextView) findViewById(R.id.txt_person_name);
+        txt_money = (TextView) findViewById(R.id.txt_money);
+        txt_trip_num = (TextView) findViewById(R.id.txt_trip_num);
+        txt_balance_num = (TextView) findViewById(R.id.txt_balance_num);
+        txt_zero = (TextView) findViewById(R.id.txt_zero);
+        txt_starrating = (TextView) findViewById(R.id.txt_starrating);
+        txt_acceptancerate_1 = (TextView) findViewById(R.id.txt_acceptancerate_1);
+        txt_cancelling_1 = (TextView) findViewById(R.id.txt_cancelling_1);
+
+        img_profile = (ImageView) findViewById(R.id.img_profile);
+
+        linear_account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                linear_activity_account.setVisibility(View.VISIBLE);
+                linear_activity_home.setVisibility(View.GONE);
+                linear_activity_earning.setVisibility(View.GONE);
+                linear_activity_rating.setVisibility(View.GONE);
+
+                img_home.setImageResource(R.drawable.ic_home);
+                img_earnings.setImageResource(R.drawable.ic_earnings);
+                img_rating.setImageResource(R.drawable.ic_ratings);
+                img_account.setImageResource(R.drawable.ic_account_blue);
+
+                txt_home.setTextColor(getResources().getColor(R.color.white));
+                txt_earnings.setTextColor(getResources().getColor(R.color.white));
+                txt_rating.setTextColor(getResources().getColor(R.color.white));
+                txt_account.setTextColor(getResources().getColor(R.color.tital_blue));
+
+            }
+        });
+        linear_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linear_activity_home.setVisibility(View.VISIBLE);
+                linear_activity_account.setVisibility(View.GONE);
+                linear_activity_earning.setVisibility(View.GONE);
+                linear_activity_rating.setVisibility(View.GONE);
+
+                img_home.setImageResource(R.drawable.ic_home_blue);
+                img_earnings.setImageResource(R.drawable.ic_earnings);
+                img_rating.setImageResource(R.drawable.ic_ratings);
+                img_account.setImageResource(R.drawable.ic_account);
+
+                txt_home.setTextColor(getResources().getColor(R.color.tital_blue));
+                txt_earnings.setTextColor(getResources().getColor(R.color.white));
+                txt_rating.setTextColor(getResources().getColor(R.color.white));
+                txt_account.setTextColor(getResources().getColor(R.color.white));
+
+            }
+        });
+        linear_earnings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linear_activity_earning.setVisibility(View.VISIBLE);
+                linear_activity_home.setVisibility(View.GONE);
+                linear_activity_account.setVisibility(View.GONE);
+                linear_activity_rating.setVisibility(View.GONE);
+
+                img_home.setImageResource(R.drawable.ic_home);
+                img_earnings.setImageResource(R.drawable.ic_earnings_blue);
+                img_rating.setImageResource(R.drawable.ic_ratings);
+                img_account.setImageResource(R.drawable.ic_account);
+
+                txt_home.setTextColor(getResources().getColor(R.color.white));
+                txt_earnings.setTextColor(getResources().getColor(R.color.tital_blue));
+                txt_rating.setTextColor(getResources().getColor(R.color.white));
+                txt_account.setTextColor(getResources().getColor(R.color.white));
+
+            }
+        });
+        linear_rating.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linear_activity_rating.setVisibility(View.VISIBLE);
+                linear_activity_earning.setVisibility(View.GONE);
+                linear_activity_account.setVisibility(View.GONE);
+                linear_activity_home.setVisibility(View.GONE);
+
+                img_home.setImageResource(R.drawable.ic_home);
+                img_earnings.setImageResource(R.drawable.ic_earnings);
+                img_rating.setImageResource(R.drawable.ic_ratings_blue);
+                img_account.setImageResource(R.drawable.ic_account);
+
+                txt_home.setTextColor(getResources().getColor(R.color.white));
+                txt_earnings.setTextColor(getResources().getColor(R.color.white));
+                txt_rating.setTextColor(getResources().getColor(R.color.tital_blue));
+                txt_account.setTextColor(getResources().getColor(R.color.white));
 
             }
         });
@@ -816,9 +1244,7 @@ public class DriverMainPage extends AppCompatActivity implements LocationListene
         mLocationRequest.setInterval(1000);
         mLocationRequest.setFastestInterval(1000);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
-        if (ContextCompat.checkSelfPermission(DriverMainPage.this,
-                Manifest.permission.ACCESS_FINE_LOCATION)
-                == PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(DriverMainPage.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
         }
 

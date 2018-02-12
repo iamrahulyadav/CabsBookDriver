@@ -152,8 +152,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/_8sdp"
-                    android:src="@drawable/ic_home" />
+                    android:layout_marginTop="@dimen/_8sdp"/>
 
                 <TextView
                     android:id="@+id/txt_home"
@@ -161,7 +160,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="HOME"
-                    android:textColor="@color/white"
                     android:textSize="@dimen/_11sdp" />
             </LinearLayout>
 
@@ -176,8 +174,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/_8sdp"
-                    android:src="@drawable/ic_earnings" />
+                    android:layout_marginTop="@dimen/_8sdp"/>
 
                 <TextView
                     android:id="@+id/txt_earnings"
@@ -185,7 +182,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="EARNINGS"
-                    android:textColor="@color/white"
                     android:textSize="@dimen/_11sdp" />
             </LinearLayout>
 
@@ -200,9 +196,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/_8sdp"
-
-                    android:src="@drawable/ic_ratings" />
+                    android:layout_marginTop="@dimen/_8sdp"/>
 
                 <TextView
                     android:id="@+id/txt_rating"
@@ -210,8 +204,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="RATINGS"
-
-                    android:textColor="@color/white"
                     android:textSize="@dimen/_11sdp" />
             </LinearLayout>
 
@@ -226,8 +218,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/_8sdp"
-                    android:src="@drawable/ic_account" />
+                    android:layout_marginTop="@dimen/_8sdp"/>
 
                 <TextView
                     android:id="@+id/txt_account"
@@ -235,7 +226,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="ACCOUNT"
-                    android:textColor="@color/white"
                     android:textSize="@dimen/_11sdp" />
             </LinearLayout>
         </LinearLayout>

@@ -59,8 +59,7 @@ public class WeeklySummary extends AppCompatActivity implements OnChartGestureLi
     private ProgressDialog pd;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weekly_summary);
         txt_weeklydates = (TextView) findViewById(R.id.txt_weeklydates);

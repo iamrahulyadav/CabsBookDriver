@@ -62,8 +62,8 @@ public class DriverSignIn extends AppCompatActivity implements LocationListener,
     private String email_str,otp_str,pass_str;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_sign_in);
         txt_title_Dsignin = (TextView) findViewById(R.id.txt_title_Dsignin);

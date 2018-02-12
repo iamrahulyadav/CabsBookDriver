@@ -72,7 +72,6 @@ public class CurrentTrips extends AppCompatActivity {
         else
         {
             Picasso.with(CurrentTrips.this).load(getImageStr).placeholder(R.drawable.ic_profile).into(img_userpic);
-
         }
 
         img_back_currenttrip = (ImageView) findViewById(R.id.img_back_currenttrip);
